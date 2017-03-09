@@ -20,9 +20,11 @@ package lanou.com.fakebilibili.fragment;
  * 　 ▊　▂　▊　　　　　　▊　▂　▊
  **/
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
 
 /**
  * Created by 司帅 on 17/3/9.
@@ -30,6 +32,7 @@ import lanou.com.fakebilibili.R;
 
 public class ChaseFragment extends BaseFragment{
     private RecyclerView chaseRecyclerView;
+    private ChaseRecyclerViewAdapter chaseRecyclerViewAdapter;
     @Override
     protected int bindLayout() {
         return R.layout.fragment_chase;
@@ -42,7 +45,9 @@ public class ChaseFragment extends BaseFragment{
 
     @Override
     protected void initData() {
-
+        chaseRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        chaseRecyclerViewAdapter = new ChaseRecyclerViewAdapter(getActivity());
+        chaseRecyclerView.setAdapter(chaseRecyclerViewAdapter);
     }
 
     @Override
