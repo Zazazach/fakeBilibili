@@ -17,15 +17,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
+
         adapter=new FragmentAdapter(getSupportFragmentManager());
         list=new ArrayList<>();
         list.add(new RecommendFragment());
 
         adapter.setList(list);
-=======
-        //1
-        //11
->>>>>>> eb64704f4b3c02c9dc26a5509f5a955aa1f72356
+
     }
 }
