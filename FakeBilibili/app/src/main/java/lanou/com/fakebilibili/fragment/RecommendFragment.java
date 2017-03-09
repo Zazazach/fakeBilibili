@@ -1,8 +1,11 @@
 package lanou.com.fakebilibili.fragment;
 
+import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +43,19 @@ public class RecommendFragment extends BaseFragment{
         adapter.setFragments(fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        
+
+        LinearLayout layout = (LinearLayout) tabLayout.getChildAt(0);
+//        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) layout.getLayoutParams();
+//        layout.setDividerPadding(params.height = 10);
+        layout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
+        layout.setDividerDrawable(ContextCompat.getDrawable(getContext(),R.drawable.recommend_line));
+
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
             tab.setText(adapter.getTitles(i));
         }
+
     }
 
     @Override

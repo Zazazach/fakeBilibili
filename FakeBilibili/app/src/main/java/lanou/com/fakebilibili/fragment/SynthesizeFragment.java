@@ -1,5 +1,7 @@
 package lanou.com.fakebilibili.fragment;
 
+import lanou.com.fakebilibili.R;
+
 /**
  * Created by Parcelable on 17/3/9.
  */
@@ -7,7 +9,7 @@ package lanou.com.fakebilibili.fragment;
 public class SynthesizeFragment extends BaseFragment {
     @Override
     protected int bindLayout() {
-        return 0;
+        return R.layout.fragment_synthesize;
     }
 
     @Override

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
@@ -11,7 +12,9 @@
         android:orientation="horizontal">
 
         <android.support.design.widget.TabLayout
+            app:tabTextColor="@drawable/recommend_text_bg"
             android:id="@+id/tab_recommend"
+            app:tabIndicatorHeight="0dp"
             android:layout_width="wrap_content"
             android:layout_height="match_parent">
 
