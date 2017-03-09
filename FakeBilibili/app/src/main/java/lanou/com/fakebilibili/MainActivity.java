@@ -3,12 +3,11 @@ package lanou.com.fakebilibili;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import lanou.com.fakebilibili.adapter.FragmentAdapter;
 import lanou.com.fakebilibili.fragment.AreaFragment;
 import lanou.com.fakebilibili.fragment.ChaseFragment;
 import lanou.com.fakebilibili.fragment.RecommendFragment;

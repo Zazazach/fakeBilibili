@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:background="#f88"/>
+            android:background="#fb7299"/>
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tl_act_main"

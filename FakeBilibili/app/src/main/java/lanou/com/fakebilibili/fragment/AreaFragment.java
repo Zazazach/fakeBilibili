@@ -1,8 +1,7 @@
 package lanou.com.fakebilibili.fragment;
 
-import android.widget.BaseAdapter;
-
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.okhttp.OkhttpTool;
 
 /**
  * .       _ooOoo_
@@ -19,8 +18,9 @@ import lanou.com.fakebilibili.R;
 public class AreaFragment extends BaseFragment {
     @Override
     protected int bindLayout() {
-        return R.layout.area_fragment;
+        return R.layout.fragment_area;
     }
+
 
     @Override
     protected void initView() {
