@@ -30,8 +30,14 @@ import lanou.com.fakebilibili.utils.BaseViewHolder;
  */
 
 public class ChaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolder>{
+    private static final int HEAD = -1;
+    private static final int MIDDLE = -2;
+    private static final int BODY = -3;
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        switch (viewType){
+
+        }
         return null;
     }
 
@@ -42,6 +48,17 @@ public class ChaseRecyclerViewAdapter extends RecyclerView.Adapter<BaseViewHolde
 
     @Override
     public int getItemCount() {
-        return 0;
+        return 4;
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        if (position == 0){
+            return HEAD;
+        }else if (position == 1){
+            return MIDDLE;
+        }else{
+            return BODY;
+        }
     }
 }

@@ -23,7 +23,9 @@ package lanou.com.fakebilibili.utils;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,6 +55,24 @@ public class BaseViewHolder extends RecyclerView.ViewHolder{
     //得到他的行布局
     public View getmView(){
         return mView;
+    }
+    //针对RecyclerView的初始化话操作
+    public  static BaseViewHolder creatViewHolder(Context context, ViewGroup viewGroup, int layoutId){
+        View itemView = LayoutInflater.from(context).inflate(layoutId,viewGroup,false);
+        BaseViewHolder holder = new BaseViewHolder(itemView,context);
+        return holder;
+    }
+    //针对ListView的初始化操作
+    public static BaseViewHolder creatListViewHolder(View view,ViewGroup viewGroup,int layoutId){
+        BaseViewHolder holder = null;
+        if (view == null){
+            view = LayoutInflater.from(viewGroup.getContext()).inflate(layoutId,viewGroup,false);
+            holder = new BaseViewHolder(view, viewGroup.getContext());
+            view.setTag(holder);
+        }else {
+            holder = (BaseViewHolder) view.getTag();
+        }
+        return holder;
     }
     //根据id返回我们需要的组件
     public <T extends View> T getView(int id){
