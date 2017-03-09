@@ -12,9 +12,11 @@ import java.util.List;
 
 public class RecommendPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragments;
+    private String[] titles = {"综合","动态"};
 
     public void setFragments(List<Fragment> fragments) {
         this.fragments = fragments;
+        notifyDataSetChanged();
     }
 
     public RecommendPagerAdapter(FragmentManager fm) {
@@ -29,5 +31,8 @@ public class RecommendPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return fragments != null ? fragments.size() : 0;
+    }
+    public String getTitles(int position){
+        return titles[position];
     }
 }
