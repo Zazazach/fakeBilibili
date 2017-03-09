@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,19 +12,21 @@
         android:orientation="horizontal">
 
         <android.support.design.widget.TabLayout
-            app:tabTextColor="@drawable/recommend_text_bg"
+            android:layout_marginLeft="10dp"
             android:id="@+id/tab_recommend"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
             app:tabIndicatorHeight="0dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent">
+            app:tabSelectedTextColor="@drawable/recommend_text_bg">
 
         </android.support.design.widget.TabLayout>
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
+            android:layout_marginLeft="150dp"
             android:id="@+id/iv_recommend_like_tab"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
 
 
     </LinearLayout>
@@ -33,7 +35,6 @@
         android:id="@+id/view_pager_recommend"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9">
-    </android.support.v4.view.ViewPager>
+        android:layout_weight="9"></android.support.v4.view.ViewPager>
 
 </LinearLayout>
