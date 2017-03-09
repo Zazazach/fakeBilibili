@@ -35,4 +35,6 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.youth.banner:banner:1.4.8'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
+    compile 'jp.wasabeef:glide-transformations:2.0.0'
+
 }
