@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_left_chase_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:src="@mipmap/aa" />
+
+    <ImageView
+        android:id="@+id/iv_right_chase_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+        android:src="@mipmap/aa" />
+    <RelativeLayout
+        android:id="@+id/rl_channels_chase_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_left_chase_head">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间表"
+            android:textSize="18sp"
+            android:layout_marginLeft="40dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:drawablePadding="10dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="索引"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="10dp"
+            android:layout_marginRight="40dp"/>
+    </RelativeLayout>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="10dp"
+    android:background="#e5e5e5"
+    android:layout_below="@id/rl_channels_chase_head"/>
+
+</RelativeLayout>
