@@ -26,7 +26,7 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    @Override
+
     public void initView() {
         tabLayout=bindView(R.id.tl_act_main);
         viewPager=bindView(R.id.vp_act_main);
@@ -34,6 +34,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+
+
+
         adapter=new FragmentAdapter(getSupportFragmentManager());
         list=new ArrayList<>();
 
@@ -44,7 +47,6 @@ public class MainActivity extends BaseActivity {
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         adapter.setList(list);
-
 
     }
 }
