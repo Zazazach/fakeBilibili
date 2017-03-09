@@ -29,7 +29,6 @@ public class RecommendFragment extends BaseFragment{
     protected void initView() {
         tabLayout = bindView(R.id.tab_recommend);
         viewPager = bindView(R.id.view_pager_recommend);
-
     }
 
     @Override
@@ -41,8 +40,10 @@ public class RecommendFragment extends BaseFragment{
         adapter.setFragments(fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-
-
+        for (int i = 0; i < tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = tabLayout.getTabAt(i);
+            tab.setText(adapter.getTitles(i));
+        }
     }
 
     @Override
