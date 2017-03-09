@@ -43,13 +43,12 @@ public class RecommendFragment extends BaseFragment{
         adapter.setFragments(fragments);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-        
 
+        //画两个tab之间的线
         LinearLayout layout = (LinearLayout) tabLayout.getChildAt(0);
-//        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) layout.getLayoutParams();
-//        layout.setDividerPadding(params.height = 10);
         layout.setShowDividers(LinearLayout.SHOW_DIVIDER_MIDDLE);
         layout.setDividerDrawable(ContextCompat.getDrawable(getContext(),R.drawable.recommend_line));
+        layout.setDividerPadding(50);
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
