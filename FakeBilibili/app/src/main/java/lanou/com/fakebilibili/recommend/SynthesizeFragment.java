@@ -1,9 +1,16 @@
 package lanou.com.fakebilibili.recommend;
 
 import lanou.com.fakebilibili.R;
+<<<<<<< HEAD:FakeBilibili/app/src/main/java/lanou/com/fakebilibili/recommend/SynthesizeFragment.java
 import lanou.com.fakebilibili.fragment.BaseFragment;
+=======
+<<<<<<< HEAD
+import lanou.com.fakebilibili.utils.BaseFragment;
+=======
+>>>>>>> e2608e84aa291b7e5e405ab84ca740ec74c9c028:FakeBilibili/app/src/main/java/lanou/com/fakebilibili/fragment/SynthesizeFragment.java
 import lanou.com.fakebilibili.ijk.IjkVideoView;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
+>>>>>>> 02802c3895ee18db0945a8f53d73d3a968476038
 
 /**
  * Created by Parcelable on 17/3/9.

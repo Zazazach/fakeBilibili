@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili.adapter;
+package lanou.com.fakebilibili;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

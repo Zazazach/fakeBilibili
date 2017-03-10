@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili.bean;
+package lanou.com.fakebilibili.area.modle;
 
 import com.google.gson.annotations.SerializedName;
 

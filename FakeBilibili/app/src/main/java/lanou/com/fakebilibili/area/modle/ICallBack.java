@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili.adapter;
+package lanou.com.fakebilibili.area.modle;
 
 /**
  * .       _ooOoo_
@@ -9,9 +9,11 @@ package lanou.com.fakebilibili.adapter;
  * .   ____/`---'\____
  * . .'  \\|     |//  `.
  * ./  \\|||  :  |||//  \
- * Created by Zach on 17/3/9.
+ * Created by Zach on 17/3/10.
  */
 
-public class AreaFirstTvAdapter
-{
+public interface ICallBack<T> {
+    void onSuccess(Class<T> tClass);
+    void onFail();
+
 }
