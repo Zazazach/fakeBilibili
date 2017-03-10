@@ -1,5 +1,6 @@
 package lanou.com.fakebilibili.area.view;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -54,6 +55,12 @@ public class AreaFragment extends BaseFragment implements IView {
         recyclerView.setLayoutManager(manager);
 
 
+        areaFirstTvAdapter.setiRvClick(new IRvClick() {
+            @Override
+            public void clickMe(int position) {
+                myPrexenter.interClick(position);
+            }
+        });
 
     }
 
@@ -75,5 +82,12 @@ public class AreaFragment extends BaseFragment implements IView {
     @Override
     public void failData() {
 
+    }
+
+    @Override
+    public void rvClick(int position) {
+        Intent intent=new Intent(getActivity(),AreaFirstAct.class);
+        intent.putExtra("uri",areaFirstBean.getData().get(position).getBody().get(0).getUri());
+        startActivity(intent);
     }
 }

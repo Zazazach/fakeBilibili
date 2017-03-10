@@ -3,24 +3,22 @@ package lanou.com.fakebilibili.activity;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-
 import java.util.ArrayList;
 import java.util.List;
-
-
-
+import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.recommend.RecommendFragment;
+import lanou.com.fakebilibili.utils.BaseActivity;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
 
-import lanou.com.fakebilibili.area.view.AreaFragment;
+
+
 import lanou.com.fakebilibili.fragment.chasefragment.view.ChaseFragment;
 
 
-import lanou.com.fakebilibili.recommend.RecommendFragment;
 
 
 
-import lanou.com.fakebilibili.utils.BaseActivity;
 
 
 public class MainActivity extends BaseActivity {
