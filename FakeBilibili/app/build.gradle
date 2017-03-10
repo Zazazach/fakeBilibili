@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "lanou.com.fakebilibili"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -16,6 +16,17 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']  /**在libs文件夹下找so文件*/
+        }
+    }
+}
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs' /**在libs文件夹下找aar文件*/
     }
 }
 
@@ -36,5 +47,19 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.8'
     compile 'de.greenrobot:eventbus:3.0.0-beta1'
     compile 'jp.wasabeef:glide-transformations:2.0.0'
+
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.6.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.1'
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.6.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.6.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.6.1'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.6.1'
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.6.1'
+
+
+    compile(name: 'ijkplayer-java-release', ext: 'aar')
 
 }

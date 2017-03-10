@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_nline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/topic"
+        android:scaleType="fitXY"
+        android:layout_marginTop="15dp"
+        />
+    <TextView
+        android:id="@+id/tv_nline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="话题"
+        android:layout_toRightOf="@id/iv_nline"
+        android:layout_alignBottom="@id/iv_nline"
+        android:layout_marginLeft="6dp"/>
+    <Button
+        android:id="@+id/btn_nline"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:text="进去看看"
+        android:textSize="10sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/qqpic"
+        android:layout_below="@id/iv_nline"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        />
+
+
+
+
+</RelativeLayout>
