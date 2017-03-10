@@ -10,7 +10,7 @@ import java.util.List;
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
 import lanou.com.fakebilibili.fragment.AreaFragment;
-import lanou.com.fakebilibili.fragment.ChaseFragment;
+import lanou.com.fakebilibili.fragment.chasefragment.view.ChaseFragment;
 import lanou.com.fakebilibili.fragment.RecommendFragment;
 
 public class MainActivity extends BaseActivity {
