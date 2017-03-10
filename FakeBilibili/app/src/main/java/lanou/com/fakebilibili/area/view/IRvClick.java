@@ -1,7 +1,5 @@
 package lanou.com.fakebilibili.area.view;
 
-import lanou.com.fakebilibili.area.modle.AreaFirstBean;
-
 /**
  * .       _ooOoo_
  * .      o8888888o
@@ -14,8 +12,6 @@ import lanou.com.fakebilibili.area.modle.AreaFirstBean;
  * Created by Zach on 17/3/10.
  */
 
-public interface IView {
-    <T> void  successData(T wanted);
-    void failData();
-    void rvClick(int position);
+public interface IRvClick {
+    void clickMe(int position);
 }

@@ -3,8 +3,15 @@ package lanou.com.fakebilibili.area.view;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+
+import java.util.List;
 
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.area.modle.AreaFirstBean;
 import lanou.com.fakebilibili.utils.BaseViewHolder;
 
 /**
@@ -21,6 +28,12 @@ import lanou.com.fakebilibili.utils.BaseViewHolder;
 
 public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
     private Context context;
+    private List<AreaFirstBean.DataBean.BodyBean> list;
+
+    public void setList(List<AreaFirstBean.DataBean.BodyBean> list) {
+        this.list = list;
+        notifyDataSetChanged();
+    }
 
     public AreaFirstFrvAdpter(Context context) {
         this.context = context;
@@ -33,11 +46,21 @@ public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public void onBindViewHolder(BaseViewHolder holder, int position) {
+        ImageView imageView=holder.getView(R.id.imageView);
+        Glide.with(context).load(list.get(position).getCover()).into(imageView);
 
+        TextView textView=holder.getView(R.id.tv_area_first_frv_line);
+        textView.setText(list.get(position).getTitle());
+
+        TextView play=holder.getView(R.id.tv_frv_line_play);
+        play.setText(list.get(position).getPlay()+"");
+
+        TextView danmaku=holder.getView(R.id.tv_frv_line_comment);
+        danmaku.setText(list.get(position).getDanmaku()+"");
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return list!=null?list.size():0;
     }
 }
