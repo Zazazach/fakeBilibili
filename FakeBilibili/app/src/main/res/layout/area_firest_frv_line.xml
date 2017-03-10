@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:background="#ffff">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:src="@mipmap/mokey"
+        android:id="@+id/imageView" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="【毁童年】大雄奇怪的本子"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:maxLines="2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/bofang"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_frv_line_play"
+            android:layout_width="35dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:text="5515"
+            android:textSize="10sp"
+            android:paddingTop="2dp"
+            android:layout_toRightOf="@id/iv"
+            android:layout_marginLeft="7dp"
+            />
+
+        <ImageView
+            android:id="@+id/iviv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/pinglun"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="110dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_frv_line_comment"
+            android:layout_width="35dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:text="5515"
+            android:textSize="10sp"
+            android:paddingTop="2dp"
+            android:layout_toRightOf="@id/iviv"
+            android:layout_marginLeft="7dp"
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

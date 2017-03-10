@@ -23,12 +23,13 @@ package lanou.com.fakebilibili.fragment;
 import android.support.v7.widget.RecyclerView;
 
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.utils.BaseFragment;
 
 /**
  * Created by 司帅 on 17/3/9.
  */
 
-public class ChaseFragment extends BaseFragment{
+public class ChaseFragment extends BaseFragment {
     private RecyclerView chaseRecyclerView;
     @Override
     protected int bindLayout() {

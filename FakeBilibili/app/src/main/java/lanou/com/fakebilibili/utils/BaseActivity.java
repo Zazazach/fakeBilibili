@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili;
+package lanou.com.fakebilibili.utils;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

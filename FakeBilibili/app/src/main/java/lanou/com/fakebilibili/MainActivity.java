@@ -7,10 +7,10 @@ import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
 
-import lanou.com.fakebilibili.adapter.FragmentAdapter;
-import lanou.com.fakebilibili.fragment.AreaFragment;
+import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.fragment.ChaseFragment;
 import lanou.com.fakebilibili.fragment.RecommendFragment;
+import lanou.com.fakebilibili.utils.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
