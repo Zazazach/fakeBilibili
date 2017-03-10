@@ -11,7 +11,7 @@ import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
 import lanou.com.fakebilibili.fragment.AreaFragment;
 import lanou.com.fakebilibili.fragment.ChaseFragment;
-import lanou.com.fakebilibili.fragment.RecommendFragment;
+import lanou.com.fakebilibili.recommend.RecommendFragment;
 
 public class MainActivity extends BaseActivity {
 

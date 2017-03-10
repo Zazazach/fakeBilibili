@@ -1,7 +1,6 @@
-package lanou.com.fakebilibili.fragment;
+package lanou.com.fakebilibili.recommend;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -16,12 +15,13 @@ import java.util.List;
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.activity.LikeActivity;
 import lanou.com.fakebilibili.adapter.RecommendPagerAdapter;
+import lanou.com.fakebilibili.fragment.BaseFragment;
 
 /**
  * Created by Parcelable on 17/3/9.
  */
 
-public class RecommendFragment extends BaseFragment{
+public class RecommendFragment extends BaseFragment {
     private RecommendPagerAdapter adapter;
     private TabLayout tabLayout;
     private List<Fragment> fragments;

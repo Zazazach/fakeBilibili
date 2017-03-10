@@ -1,6 +1,7 @@
-package lanou.com.fakebilibili.fragment;
+package lanou.com.fakebilibili.recommend;
 
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.fragment.BaseFragment;
 import lanou.com.fakebilibili.ijk.IjkVideoView;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
