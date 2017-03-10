@@ -10,6 +10,7 @@ import lanou.com.fakebilibili.recommend.presenter.RecommendPresenter;
 import lanou.com.fakebilibili.recommend.view.IView;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
+<<<<<<< HEAD
 import lanou.com.fakebilibili.utils.BaseFragment;
 import lanou.com.fakebilibili.ijk.IjkVideoView;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
@@ -17,6 +18,8 @@ import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
 import lanou.com.fakebilibili.ijk.IjkVideoView;
+=======
+>>>>>>> 04405b2bd1134099538ee04e2476e69ae4a16d13
 
 /**
  * Created by Parcelable on 17/3/9.

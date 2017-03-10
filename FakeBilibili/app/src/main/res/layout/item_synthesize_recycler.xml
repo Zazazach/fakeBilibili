@@ -21,7 +21,7 @@
         <TextView
             android:text="文字"
             android:maxLines="2"
-
+            android:ellipsize="end"
             android:id="@+id/tv_synthesize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
