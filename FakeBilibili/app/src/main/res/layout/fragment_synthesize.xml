@@ -3,11 +3,10 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler_view_synthesize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView>
 
-    <lanou.com.fakebilibili.ijk.IjkVideoView
-        android:id="@+id/video_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </lanou.com.fakebilibili.ijk.IjkVideoView>
 </LinearLayout>
