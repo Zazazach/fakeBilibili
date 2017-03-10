@@ -2,9 +2,17 @@ package lanou.com.fakebilibili.recommend;
 
 import lanou.com.fakebilibili.R;
 
+<<<<<<< HEAD
 import lanou.com.fakebilibili.utils.BaseFragment;
 import lanou.com.fakebilibili.ijk.IjkVideoView;
 import tv.danmaku.ijk.media.player.IjkMediaPlayer;
+=======
+
+import lanou.com.fakebilibili.utils.BaseFragment;
+
+import lanou.com.fakebilibili.ijk.IjkVideoView;
+
+>>>>>>> 0aab56aebcfbf903f47c54cef21a3db7d76a3d1c
 
 /**
  * Created by Parcelable on 17/3/9.

@@ -8,15 +8,29 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+<<<<<<< HEAD
 import lanou.com.fakebilibili.area.view.AreaFragment;
+=======
+>>>>>>> 0aab56aebcfbf903f47c54cef21a3db7d76a3d1c
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
 
+<<<<<<< HEAD
 import lanou.com.fakebilibili.fragment.ChaseFragment;
 
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 
+=======
+import lanou.com.fakebilibili.area.view.AreaFragment;
+import lanou.com.fakebilibili.fragment.chasefragment.view.ChaseFragment;
+
+
+import lanou.com.fakebilibili.recommend.RecommendFragment;
+
+
+
+>>>>>>> 0aab56aebcfbf903f47c54cef21a3db7d76a3d1c
 import lanou.com.fakebilibili.utils.BaseActivity;
 
 

@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili.fragment;
+package lanou.com.fakebilibili.utils.animatorutils;
 /**
  * ██████齐天大圣 - 司帅████████
  *
@@ -20,39 +20,16 @@ package lanou.com.fakebilibili.fragment;
  * 　 ▊　▂　▊　　　　　　▊　▂　▊
  **/
 
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-
-import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
+import android.view.animation.LinearInterpolator;
 
 /**
- * Created by 司帅 on 17/3/9.
+ * Created by 司帅 on 17/3/10.
  */
 
-public class ChaseFragment extends BaseFragment {
-    private RecyclerView chaseRecyclerView;
-    private ChaseRecyclerViewAdapter chaseRecyclerViewAdapter;
+public class JellyInterpolator extends LinearInterpolator{
+    private float factor = 0.2f;
     @Override
-    protected int bindLayout() {
-        return R.layout.fragment_chase;
-    }
-
-    @Override
-    protected void initView() {
-        chaseRecyclerView = bindView(R.id.chase_recyclerView);
-    }
-
-    @Override
-    protected void initData() {
-        chaseRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        chaseRecyclerViewAdapter = new ChaseRecyclerViewAdapter(getActivity());
-        chaseRecyclerView.setAdapter(chaseRecyclerViewAdapter);
-    }
-
-    @Override
-    protected void bindEvent() {
-
+    public float getInterpolation(float input) {
+        return (float) (Math.pow(2, -10 * input) * Math.sin((input - factor / 4) * (2 * Math.PI) / factor) + 1);
     }
 }
