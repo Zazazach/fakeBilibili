@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
-<<<<<<< HEAD
+
 <uses-permission android:name="android.permission.INTERNET"/>
-=======
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
-
->>>>>>> 9b4be5e632a2f55b04977208ab36298964fa1bb0
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.LikeActivity"/>
-        <activity android:name=".area.view.AreaFirstAct"></activity>
+        <activity android:name=".area.view.AreaFirstNlineAct"/>
+        <activity android:name=".area.view.AreaGridDetailAct"/>
     </application>
 
 </manifest>
