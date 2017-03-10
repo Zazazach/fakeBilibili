@@ -1,6 +1,7 @@
 package lanou.com.fakebilibili.activity;
 
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.utils.BaseActivity;
 
 /**
  * Created by Parcelable on 17/3/9.

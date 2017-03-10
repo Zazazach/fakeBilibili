@@ -40,4 +40,10 @@ public class MyPrexenter<T> {
         });
     }
 
+    public void interClick(int position){
+        iView.rvClick(position);
+    }
+
+
+
 }

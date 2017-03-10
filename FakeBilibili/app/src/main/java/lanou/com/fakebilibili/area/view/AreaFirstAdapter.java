@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
@@ -39,6 +40,12 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
     private int fLine =0;
     private int nLine=1;
     private int fRv=2;
+    private IRvClick iRvClick;
+
+    public void setiRvClick(IRvClick iRvClick) {
+        this.iRvClick = iRvClick;
+        notifyDataSetChanged();
+    }
 
     public void setAreaFirstBean(AreaFirstBean areaFirstBean) {
         this.areaFirstBean = areaFirstBean;
@@ -65,10 +72,10 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
     }
 
     @Override
-    public void onBindViewHolder(BaseViewHolder holder, int position) {
+    public void onBindViewHolder(BaseViewHolder holder, final int position) {
         int type=getItemViewType(position);
         if (type== fLine){
-//            Log.d("AreaFirstAdapter", areaFirstBean.getData().size()+"");
+
             RecyclerView firstRv=holder.getView(R.id.rv_first_line);
 
             AreaFirstLineAdapter adapter=new AreaFirstLineAdapter(context);
@@ -79,31 +86,51 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 }
             };
 
-
             firstRv.setLayoutManager(manager);
             firstRv.setAdapter(adapter);
 
 
         }else if (type==nLine){
 
-
-
+            String urls=areaFirstBean.getData().get(position-1).getBody().get(0).getCover();
+            ImageView imageView=holder.getView(R.id.iv_area_first_nline);
+            Glide.with(context).load(urls).into(imageView);
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    iRvClick.clickMe(position-1);
+                }
+            });
 
         }else {
-
+            TextView title=holder.getView(R.id.tv_frv_name);
+            title.setText(areaFirstBean.getData().get(position-1).getTitle());
 
             RecyclerView recyclerView=holder.getView(R.id.rv_frv);
+
             AreaFirstFrvAdpter firstFrvAdpter=new AreaFirstFrvAdpter(context);
+            firstFrvAdpter.setList(areaFirstBean.getData().get(position-1).getBody());
+
             GridLayoutManager layoutManager=new GridLayoutManager(context,2,LinearLayoutManager.VERTICAL,false){
                 @Override
                 public boolean canScrollVertically() {
                     return false;
                 }
             };
+
+            if (position==13){
+                layoutManager=new GridLayoutManager(context,1,LinearLayoutManager.HORIZONTAL,false){
+                    @Override
+                    public boolean canScrollVertically() {
+                        return true;
+                    }
+                };
+            }
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(firstFrvAdpter);
             Banner banner1=holder.getView(R.id.banner);
             banner1.setVisibility(View.GONE);
+
             if (position==1){
                 Banner banner=holder.getView(R.id.banner);
                 banner.setVisibility(View.VISIBLE);
@@ -115,6 +142,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 banner.setImageLoader(new BannerLoader()).setImages(imageList).isAutoPlay(true).setDelayTime(3000).setIndicatorGravity(BannerConfig.RIGHT).start();
 
             }
+
 
         }
     }
