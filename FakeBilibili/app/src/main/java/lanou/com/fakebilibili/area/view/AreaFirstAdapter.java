@@ -132,14 +132,24 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
             banner1.setVisibility(View.GONE);
 
             if (position==1){
-                Banner banner=holder.getView(R.id.banner);
+                final Banner banner=holder.getView(R.id.banner);
                 banner.setVisibility(View.VISIBLE);
 
-                ArrayList<String> imageList=new ArrayList<>();
+                final ArrayList<String> imageList=new ArrayList<>();
                 for (AreaFirstBean.DataBean.BannerBean.BottomBean bottomBean : areaFirstBean.getData().get(0).getBanner().getBottom()) {
                     imageList.add(bottomBean.getImage());
                 }
                 banner.setImageLoader(new BannerLoader()).setImages(imageList).isAutoPlay(true).setDelayTime(3000).setIndicatorGravity(BannerConfig.RIGHT).start();
+
+
+                        banner.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+
+                            //banner点击监听
+                            }
+                        });
+
 
             }
 

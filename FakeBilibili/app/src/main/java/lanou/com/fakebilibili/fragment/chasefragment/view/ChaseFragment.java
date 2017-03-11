@@ -26,9 +26,19 @@ import android.support.v7.widget.RecyclerView;
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.utils.BaseFragment;
 import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
+<<<<<<< HEAD
+import lanou.com.fakebilibili.utils.BaseFragment;
+import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
+
+import lanou.com.fakebilibili.utils.BaseFragment;
+
+import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
+
+=======
 
 
 
+>>>>>>> 04405b2bd1134099538ee04e2476e69ae4a16d13
 /**
  * Created by 司帅 on 17/3/9.
  */
