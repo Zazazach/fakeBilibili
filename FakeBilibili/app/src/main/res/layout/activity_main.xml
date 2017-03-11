@@ -17,21 +17,21 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1.8"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:background="?attr/titleBgColor">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="?attr/titleBgColor" />
+                 />
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tl_act_main"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                android:background="?attr/titleBgColor"
-                app:tabTextColor="#dddddd"
+                app:tabTextColor="#aaaaaa"
                 app:tabSelectedTextColor="#ffffff">
             </android.support.design.widget.TabLayout>
         </LinearLayout>

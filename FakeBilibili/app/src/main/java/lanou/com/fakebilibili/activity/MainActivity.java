@@ -91,6 +91,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "请登录", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
             }
         });
         changeThemeNavIv.setOnClickListener(new View.OnClickListener() {
