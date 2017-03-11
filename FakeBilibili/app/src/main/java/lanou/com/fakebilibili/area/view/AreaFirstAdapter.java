@@ -1,6 +1,7 @@
 package lanou.com.fakebilibili.area.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -75,7 +76,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
     public void onBindViewHolder(BaseViewHolder holder, final int position) {
         int type=getItemViewType(position);
         if (type== fLine){
-
+            //首行布局 15个模块
             RecyclerView firstRv=holder.getView(R.id.rv_first_line);
 
             AreaFirstLineAdapter adapter=new AreaFirstLineAdapter(context);
@@ -91,7 +92,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
 
 
         }else if (type==nLine){
-
+            //常规布局,一幅图而已
             String urls=areaFirstBean.getData().get(position-1).getBody().get(0).getCover();
             ImageView imageView=holder.getView(R.id.iv_area_first_nline);
             Glide.with(context).load(urls).into(imageView);
@@ -102,7 +103,13 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 }
             });
 
+
         }else {
+
+            //Grid模式 Rv布局,注意第13位是横向的傻逼,第1位是个带banner的大哥
+            Banner banner1=holder.getView(R.id.banner);
+            banner1.setVisibility(View.GONE);
+
             TextView title=holder.getView(R.id.tv_frv_name);
             title.setText(areaFirstBean.getData().get(position-1).getTitle());
 
@@ -110,6 +117,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
 
             AreaFirstFrvAdpter firstFrvAdpter=new AreaFirstFrvAdpter(context);
             firstFrvAdpter.setList(areaFirstBean.getData().get(position-1).getBody());
+
 
             GridLayoutManager layoutManager=new GridLayoutManager(context,2,LinearLayoutManager.VERTICAL,false){
                 @Override
@@ -126,10 +134,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                     }
                 };
             }
-            recyclerView.setLayoutManager(layoutManager);
-            recyclerView.setAdapter(firstFrvAdpter);
-            Banner banner1=holder.getView(R.id.banner);
-            banner1.setVisibility(View.GONE);
+
 
             if (position==1){
                 final Banner banner=holder.getView(R.id.banner);
@@ -141,7 +146,6 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 }
                 banner.setImageLoader(new BannerLoader()).setImages(imageList).isAutoPlay(true).setDelayTime(3000).setIndicatorGravity(BannerConfig.RIGHT).start();
 
-
                         banner.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -149,10 +153,19 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                             //banner点击监听
                             }
                         });
-
-
             }
 
+            recyclerView.setLayoutManager(layoutManager);
+            recyclerView.setAdapter(firstFrvAdpter);
+            //里层的Grid模式适配器监听,也是把数据传入当中
+            firstFrvAdpter.setiRvClick(new IRvClick() {
+                @Override
+                public void clickMe(int position) {
+
+                    Intent intent=new Intent(context,AreaGridDetailAct.class);
+                    context.startActivity(intent);
+                }
+            });
 
         }
     }

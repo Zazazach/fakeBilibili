@@ -12,6 +12,7 @@
     android:background="#ffff">
 
 <LinearLayout
+    android:id="@+id/whole_area_first_frv_line"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">

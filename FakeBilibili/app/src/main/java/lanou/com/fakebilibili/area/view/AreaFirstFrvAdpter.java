@@ -2,6 +2,7 @@ package lanou.com.fakebilibili.area.view;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,6 +30,12 @@ import lanou.com.fakebilibili.utils.BaseViewHolder;
 public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
     private Context context;
     private List<AreaFirstBean.DataBean.BodyBean> list;
+    private IRvClick iRvClick;
+
+    public void setiRvClick(IRvClick iRvClick) {
+        this.iRvClick = iRvClick;
+        notifyDataSetChanged();
+    }
 
     public void setList(List<AreaFirstBean.DataBean.BodyBean> list) {
         this.list = list;
@@ -45,7 +52,7 @@ public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(BaseViewHolder holder, int position) {
+    public void onBindViewHolder(BaseViewHolder holder, final int position) {
         ImageView imageView=holder.getView(R.id.imageView);
         Glide.with(context).load(list.get(position).getCover()).into(imageView);
 
@@ -57,6 +64,13 @@ public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
 
         TextView danmaku=holder.getView(R.id.tv_frv_line_comment);
         danmaku.setText(list.get(position).getDanmaku()+"");
+
+        holder.getView(R.id.whole_area_first_frv_line).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iRvClick.clickMe(position);
+            }
+        });
     }
 
     @Override
