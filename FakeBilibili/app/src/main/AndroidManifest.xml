@@ -17,14 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
         <activity android:name=".recommend.LikeActivity"/>
-        <activity android:name=".area.view.AreaFirstAct"></activity>
         <activity android:name=".recommend.SynthesizeContentActivity"/>
-=======
-        <activity android:name=".activity.LikeActivity"/>
         <activity android:name=".area.view.AreaFirstNlineAct"/>
-<<<<<<< HEAD
         <activity android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTop"
@@ -32,10 +27,8 @@
             android:windowSoftInputMode="stateAlwaysHidden"
             ></activity>
 
-=======
-        <activity android:name=".area.view.AreaGridDetailAct"/>
->>>>>>> c3f8c3cd92699797951ff99e74589ac6665072dd
->>>>>>> fd28621f97690296efa8039efe7fbad06bdf36f8
+
+
     </application>
 
 </manifest>
