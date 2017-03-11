@@ -32,6 +32,11 @@ public class SynthesizeContentActivity extends BaseActivity {
     }
 
     @Override
+    protected void bindEvent() {
+
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         videoView.stopPlayback();
