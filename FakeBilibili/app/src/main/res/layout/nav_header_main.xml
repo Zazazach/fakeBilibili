@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="?attr/titleBgColor"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/iv_login_nav_header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_login_nav_header"
+        android:layout_below="@id/iv_login_nav_header"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击头像登录"
+        android:textColor="?attr/textColor" />
+    <!--textAppearance设置文字外观-->
+    <ImageView
+        android:id="@+id/iv_switch_nav_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="?attr/imageValue"
+        android:layout_alignParentRight="true"
+        android:padding="5dp"/>
+
+
+</RelativeLayout>

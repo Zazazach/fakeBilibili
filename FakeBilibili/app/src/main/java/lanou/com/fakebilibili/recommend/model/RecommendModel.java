@@ -3,6 +3,8 @@ package lanou.com.fakebilibili.recommend.model;
 import android.os.Handler;
 import android.os.Looper;
 
+import java.util.List;
+
 import lanou.com.fakebilibili.okhttp.ICallback;
 import lanou.com.fakebilibili.okhttp.OkhttpTool;
 
@@ -32,4 +34,7 @@ public class RecommendModel implements ICallBack{
             }
         });
     }
+
+
+
 }

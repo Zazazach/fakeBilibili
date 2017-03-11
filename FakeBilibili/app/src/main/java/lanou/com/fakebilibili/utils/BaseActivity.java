@@ -28,6 +28,8 @@ public abstract class BaseActivity extends AppCompatActivity {
         initView();
 
         initData();
+
+        bindEvent();
     }
 
     public abstract int bindLayout();
@@ -35,6 +37,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     public abstract void initView();
 
     public abstract void initData();
+
+    protected abstract void bindEvent();
 
     public <T extends View> T bindView(int resId){
         return (T) findViewById(resId);

@@ -2,13 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+>>>>>>> b3ac491bf13c310294aa81d518cdca11cfb8f75d
 
     <application
+        android:name=".app.MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,12 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".recommend.LikeActivity"/>
-        <activity android:name=".recommend.SynthesizeContentActivity"/>
-        <activity android:name=".area.view.AreaFirstNlineAct"/>
-        <activity android:name=".area.view.AreaGridDetailAct"
+        <activity android:name=".recommend.LikeActivity" />
+        <activity android:name=".recommend.SynthesizeContentActivity" />
+        <activity android:name=".area.view.AreaFirstNlineAct" />
+        <activity
+            android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTop"
+<<<<<<< HEAD
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden"
         ></activity>
@@ -34,6 +41,11 @@
 
 
 
+=======
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activity.LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+>>>>>>> b3ac491bf13c310294aa81d518cdca11cfb8f75d
     </application>
 
 </manifest>

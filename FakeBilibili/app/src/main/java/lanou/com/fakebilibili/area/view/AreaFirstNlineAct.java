@@ -50,4 +50,9 @@ public class AreaFirstNlineAct extends BaseActivity {
             }
         });
     }
+
+    @Override
+    protected void bindEvent() {
+
+    }
 }

@@ -13,13 +13,6 @@ import lanou.com.fakebilibili.recommend.presenter.RecommendPresenter;
 import lanou.com.fakebilibili.recommend.view.IView;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
-import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.ijk.IjkVideoView;
-import tv.danmaku.ijk.media.player.IjkMediaPlayer;
-
-import lanou.com.fakebilibili.utils.BaseFragment;
-
-import lanou.com.fakebilibili.ijk.IjkVideoView;
 
 /**
  * Created by Parcelable on 17/3/9.
@@ -31,6 +24,7 @@ public class SynthesizeFragment extends BaseFragment implements IView{
     private SynthesizeRecyclerAdapter adapter;
     private SwipeRefreshLayout swipeRefreshLayout;
     private SynthesizeContent synthesizeContent;
+    private GridLayoutManager layoutManager;
 
     @Override
     protected int bindLayout() {
@@ -47,9 +41,13 @@ public class SynthesizeFragment extends BaseFragment implements IView{
     protected void initData() {
         presenter = new RecommendPresenter(this);
         adapter = new SynthesizeRecyclerAdapter(getContext());
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(),2, LinearLayoutManager.VERTICAL,false));
+        layoutManager = new GridLayoutManager(getContext(),2, LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(layoutManager);
+
         presenter.getRequestData(UrlData.RECOMMEND, Synthesize.class,0);
-        presenter.getRequestData(UrlData.RECOMMEND_SHORT,SynthesizeContent.class,3);
+        presenter.getRequestData(UrlData.RECOMMEND_SHORT,SynthesizeContent.class,2);
+
+
         adapter.setClick(new OnItemClick() {
             @Override
             public void Jump(int pos) {
@@ -58,6 +56,21 @@ public class SynthesizeFragment extends BaseFragment implements IView{
                 startActivity(intent);
             }
         });
+
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (newState==RecyclerView.SCROLL_STATE_SETTLING&&layoutManager.findLastVisibleItemPosition()+1==adapter.getItemCount())
+                presenter.getRequestData(UrlData.RECOMMEND,Synthesize.class,3);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
+
     }
 
     @Override
@@ -68,7 +81,6 @@ public class SynthesizeFragment extends BaseFragment implements IView{
                 presenter.getRequestData(UrlData.RECOMMEND, Synthesize.class,1);
             }
         });
-
     }
 
     @Override
@@ -94,4 +106,14 @@ public class SynthesizeFragment extends BaseFragment implements IView{
     public <T> void getContentData(T bean) {
         synthesizeContent = (SynthesizeContent) bean;
     }
+
+    @Override
+    public <T> void loadMore(T bean) {
+        Synthesize data = (Synthesize) bean;
+        adapter.setSynthesize(data);
+        recyclerView.setAdapter(adapter);
+        adapter.notifyDataSetChanged();
+
+    }
+
 }

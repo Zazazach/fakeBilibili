@@ -1,4 +1,4 @@
-package lanou.com.fakebilibili.fragment.chasefragment.view;
+package lanou.com.fakebilibili.chase.chasefragment.view;
 /**
  * ██████齐天大圣 - 司帅████████
  *
@@ -25,12 +25,6 @@ import android.support.v7.widget.RecyclerView;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
-import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
-
-import lanou.com.fakebilibili.utils.BaseFragment;
-
 import lanou.com.fakebilibili.adapter.ChaseRecyclerViewAdapter;
 
 
@@ -60,6 +54,8 @@ public class ChaseFragment extends BaseFragment {
 
     @Override
     protected void bindEvent() {
+
+        
 
     }
 }
