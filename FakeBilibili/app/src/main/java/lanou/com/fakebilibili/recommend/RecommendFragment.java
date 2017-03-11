@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.activity.LikeActivity;
 import lanou.com.fakebilibili.adapter.RecommendPagerAdapter;
 import lanou.com.fakebilibili.utils.BaseFragment;
 

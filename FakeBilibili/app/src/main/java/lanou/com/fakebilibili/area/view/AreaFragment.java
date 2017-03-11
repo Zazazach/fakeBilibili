@@ -9,8 +9,6 @@ import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.area.modle.AreaFirstBean;
 import lanou.com.fakebilibili.area.presenter.MyPrexenter;
 import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.okhttp.ICallback;
-import lanou.com.fakebilibili.okhttp.OkhttpTool;
 
 import static lanou.com.fakebilibili.area.modle.UrlData.AREA_FIRST;
 
@@ -50,7 +48,6 @@ public class AreaFragment extends BaseFragment implements IView {
         myPrexenter.wayToData(AREA_FIRST,AreaFirstBean.class);
 
         areaFirstTvAdapter=new AreaFirstAdapter(getContext());
-//        GridLayoutManager manager=new GridLayoutManager(getContext(),2, LinearLayoutManager.VERTICAL,false);
         LinearLayoutManager manager=new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(manager);
 
@@ -86,7 +83,7 @@ public class AreaFragment extends BaseFragment implements IView {
 
     @Override
     public void rvClick(int position) {
-        Intent intent=new Intent(getActivity(),AreaFirstAct.class);
+        Intent intent=new Intent(getActivity(),AreaFirstNlineAct.class);
         intent.putExtra("uri",areaFirstBean.getData().get(position).getBody().get(0).getUri());
         startActivity(intent);
     }

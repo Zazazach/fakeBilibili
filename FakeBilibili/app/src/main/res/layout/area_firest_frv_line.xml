@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-
+    app:cardCornerRadius="2dp"
     android:layout_width="wrap_content"
     android:layout_height="150dp"
-    android:layout_marginTop="3dp"
-    android:layout_marginBottom="3dp"
-    android:layout_marginLeft="3dp"
-    android:layout_marginRight="3dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
     android:background="#ffff">
 
+<LinearLayout
+    android:id="@+id/whole_area_first_frv_line"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
 
@@ -26,6 +32,7 @@
         android:layout_height="0dp"
         android:layout_weight="2"
         android:text="【毁童年】大雄奇怪的本子"
+        android:ellipsize="end"
         android:textSize="11sp"
         android:gravity="center"
         android:maxLines="2"/>
@@ -84,5 +91,8 @@
     </RelativeLayout>
 
 
-
 </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>

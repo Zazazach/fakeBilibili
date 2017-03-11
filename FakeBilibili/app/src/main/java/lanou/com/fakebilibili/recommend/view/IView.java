@@ -8,4 +8,7 @@ import lanou.com.fakebilibili.recommend.model.ICallBack;
 
 public interface IView {
     <T> void getData(T bean);
+    <T> void refresh(T bean);
+    void hideRefresh();
+    <T> void getContentData(T bean);
 }
