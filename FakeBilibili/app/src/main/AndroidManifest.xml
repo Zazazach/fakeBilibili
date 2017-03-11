@@ -26,9 +26,6 @@
             android:theme="@android:style/Theme.NoTitleBar"
             android:windowSoftInputMode="stateAlwaysHidden"
             ></activity>
-
-
-
     </application>
 
 </manifest>

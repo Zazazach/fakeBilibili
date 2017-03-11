@@ -5,6 +5,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.finaldata.UrlData;
 import lanou.com.fakebilibili.recommend.model.Synthesize;
@@ -13,13 +14,8 @@ import lanou.com.fakebilibili.recommend.presenter.RecommendPresenter;
 import lanou.com.fakebilibili.recommend.view.IView;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
-import lanou.com.fakebilibili.utils.BaseFragment;
-import lanou.com.fakebilibili.ijk.IjkVideoView;
-import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
-import lanou.com.fakebilibili.utils.BaseFragment;
 
-import lanou.com.fakebilibili.ijk.IjkVideoView;
 
 /**
  * Created by Parcelable on 17/3/9.

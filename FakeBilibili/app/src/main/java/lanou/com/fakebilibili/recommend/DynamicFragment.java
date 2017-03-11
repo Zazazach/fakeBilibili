@@ -2,9 +2,6 @@ package lanou.com.fakebilibili.recommend;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.utils.BaseFragment;
-
-import lanou.com.fakebilibili.utils.BaseFragment;
-
 /**
  * Created by Parcelable on 17/3/9.
  */
