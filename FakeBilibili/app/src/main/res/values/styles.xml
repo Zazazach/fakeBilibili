@@ -11,4 +11,18 @@
         <item name="android:textSize">@dimen/recommend_tab_text_size</item>
     </style>
 
+    <style name="DayTheme" parent="AppTheme">
+        <item name="textColor">@color/day_text</item>
+        <item name="textBackground">@color/day_bg</item>
+        <item name="titleBgColor">@color/day_title_bg</item>
+        <item name="imageValue">@mipmap/night</item>
+    </style>
+
+    <style name="NightTheme" parent="AppTheme" >
+        <item name="textColor">@color/night_text</item>
+        <item name="textBackground">@color/night_bg</item>
+        <item name="titleBgColor">@color/night_title_bg</item>
+        <item name="imageValue">@mipmap/light</item>
+    </style>
+
 </resources>
