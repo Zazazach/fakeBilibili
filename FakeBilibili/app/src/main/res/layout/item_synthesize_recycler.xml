@@ -20,6 +20,8 @@
             android:src="@mipmap/ic_launcher" />
 
         <TextView
+            android:padding="2dp"
+            android:drawableLeft="@mipmap/play"
             android:textSize="12sp"
             android:textColor="#ffffff"
             android:id="@+id/tv_synthesize_play_size"

@@ -11,4 +11,5 @@ public interface IView {
     <T> void refresh(T bean);
     void hideRefresh();
     <T> void getContentData(T bean);
+    <T> void loadMore(T bean);
 }

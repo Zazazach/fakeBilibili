@@ -31,8 +31,11 @@ public class RecommendPresenter {
                         iView.refresh(data);
                         iView.hideRefresh();
                         break;
-                    case 3:
+                    case 2:
                         iView.getContentData(data);
+                        break;
+                    case 3:
+                        iView.loadMore(data);
                         break;
 
                 }
@@ -44,4 +47,5 @@ public class RecommendPresenter {
             }
         });
     }
+
 }

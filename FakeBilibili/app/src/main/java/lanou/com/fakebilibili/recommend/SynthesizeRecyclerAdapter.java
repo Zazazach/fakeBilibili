@@ -2,6 +2,7 @@ package lanou.com.fakebilibili.recommend;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -21,6 +22,18 @@ public class SynthesizeRecyclerAdapter extends RecyclerView.Adapter<BaseViewHold
     private Context context;
     private Synthesize synthesize;
     private OnItemClick click;
+    private List<Synthesize.DataBean> dataBeen;
+    private int currentPos;
+
+    public int getCurrentPos() {
+
+        return currentPos;
+
+    }
+
+    public void setDataBeen(List<Synthesize.DataBean> dataBeen) {
+        this.dataBeen = dataBeen;
+    }
 
     public void setClick(OnItemClick click) {
         this.click = click;
@@ -43,6 +56,8 @@ public class SynthesizeRecyclerAdapter extends RecyclerView.Adapter<BaseViewHold
 
     @Override
     public void onBindViewHolder(BaseViewHolder holder, final int position) {
+        currentPos=position;
+
         holder.setText(R.id.tv_synthesize,synthesize.getData().get(position).getTitle());
         holder.setImage(R.id.iv_synthesize,synthesize.getData().get(position).getCover());
         holder.setText(R.id.tv_synthesize_tag,synthesize.getData().get(position).getTname());
@@ -63,6 +78,7 @@ public class SynthesizeRecyclerAdapter extends RecyclerView.Adapter<BaseViewHold
 
     @Override
     public int getItemCount() {
+
         return synthesize.getData() != null ? synthesize.getData().size() : 0;
     }
 }
