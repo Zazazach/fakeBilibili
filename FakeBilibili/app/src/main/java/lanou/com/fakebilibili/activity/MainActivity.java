@@ -5,9 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import java.util.ArrayList;
 import java.util.List;
-<<<<<<< HEAD
 
-=======
 
 
 
@@ -16,39 +14,10 @@ import lanou.com.fakebilibili.R;
 
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 import lanou.com.fakebilibili.utils.BaseActivity;
-
-import lanou.com.fakebilibili.area.view.AreaFragment;
-
-
-import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
-
->>>>>>> d15a53e9ef358bae142a6826a461136470958642
-import lanou.com.fakebilibili.area.view.AreaFragment;
-import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.recommend.RecommendFragment;
-import lanou.com.fakebilibili.utils.BaseActivity;
-import lanou.com.fakebilibili.adapter.FragmentAdapter;
-<<<<<<< HEAD
-import lanou.com.fakebilibili.fragment.chasefragment.view.ChaseFragment;
-
-=======
-
-
-
-
-
-import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.fragment.chasefragment.view.ChaseFragment;
 
 
-
-
-
-import lanou.com.fakebilibili.utils.BaseActivity;
-
-
->>>>>>> d15a53e9ef358bae142a6826a461136470958642
 public class MainActivity extends BaseActivity {
 
     private List<Fragment> list;
