@@ -16,8 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-
+import lanou.com.fakebilibili.app.MyApp;
 import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
 
@@ -52,6 +51,7 @@ public class MainActivity extends BaseActivity {
         //初始化抽屉头视图
         View headView = navigationView.inflateHeaderView(R.layout.nav_header_main);
         loginIv = (ImageView) headView.findViewById(R.id.iv_login_nav_header);
+        MyApp app = (MyApp) getApplication();
 
     }
 
