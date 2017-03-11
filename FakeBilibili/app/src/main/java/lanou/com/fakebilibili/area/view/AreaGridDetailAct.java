@@ -1,5 +1,10 @@
 package lanou.com.fakebilibili.area.view;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+
+import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.utils.BaseActivity;
 
 /**
@@ -14,21 +19,23 @@ import lanou.com.fakebilibili.utils.BaseActivity;
  * Created by Zach on 17/3/10.
  */
 
-public class AreaGridDetailAct extends BaseActivity{
+public class AreaGridDetailAct extends AppCompatActivity{
 
 
     @Override
-    public int bindLayout() {
-        return 0;
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+
+        if (!io.vov.vitamio.LibsChecker.checkVitamioLibs(this))
+            return;
+
+        setContentView(R.layout.area_grid_detail_act);
     }
 
-    @Override
-    public void initView() {
 
-    }
 
-    @Override
-    public void initData() {
 
-    }
+
+
 }
