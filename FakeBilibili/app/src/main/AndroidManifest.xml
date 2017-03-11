@@ -17,15 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
+
         <activity android:name=".recommend.LikeActivity"/>
         <activity android:name=".area.view.AreaFirstAct"></activity>
         <activity android:name=".recommend.SynthesizeContentActivity"/>
-=======
         <activity android:name=".activity.LikeActivity"/>
         <activity android:name=".area.view.AreaFirstNlineAct"/>
         <activity android:name=".area.view.AreaGridDetailAct"/>
->>>>>>> c3f8c3cd92699797951ff99e74589ac6665072dd
     </application>
 
 </manifest>
