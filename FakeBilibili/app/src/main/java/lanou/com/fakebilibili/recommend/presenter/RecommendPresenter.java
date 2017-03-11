@@ -18,11 +18,24 @@ public class RecommendPresenter {
         model = new RecommendModel();
     }
 
-    public <T> void getRequestData(String url,Class<T> tClass){
+    public <T> void getRequestData(String url,Class<T> tClass,final int type){
+
         model.requestData(url, tClass, new IParse() {
             @Override
             public <T> void onSuccess(T data) {
-                iView.getData(data);
+                switch (type){
+                    case 0:
+                        iView.getData(data);
+                        break;
+                    case 1:
+                        iView.refresh(data);
+                        iView.hideRefresh();
+                        break;
+                    case 3:
+                        iView.getContentData(data);
+                        break;
+
+                }
             }
 
             @Override
