@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -38,6 +39,7 @@ public class MainActivity extends BaseActivity {
     private ImageView loginNavIv,changeThemeNavIv;
 
     private boolean isNight = false;
+
     @Override
     public int bindLayout() {
         if(MyApp.appConfig.isNighTheme()){
@@ -94,7 +96,11 @@ public class MainActivity extends BaseActivity {
         changeThemeNavIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"切换主题",Toast.LENGTH_SHORT).show();
+                if (MyApp.appConfig.isNighTheme()){
+                    Toast.makeText(MainActivity.this,"切换日间模式",Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(MainActivity.this,"切换夜间模式",Toast.LENGTH_SHORT).show();
+                }
 
                 if(isNight){
                     MyApp.appConfig.setNightTheme(false);
@@ -107,15 +113,14 @@ public class MainActivity extends BaseActivity {
                 finish();
                 overridePendingTransition(R.anim.in_anim, 0);
                 startActivity(intent);
+                drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.iv_login_nav_header:
 
-                        break;
                 }
                 return false;
             }
