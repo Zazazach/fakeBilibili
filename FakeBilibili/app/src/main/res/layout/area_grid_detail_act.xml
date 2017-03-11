@@ -7,46 +7,120 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="67.2dp">
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            app:title="测试"
+
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-
 
 
             <io.vov.vitamio.widget.VideoView
                 android:id="@+id/surface_view"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"/>
+                android:layout_centerVertical="true"
+                app:layout_collapseParallaxMultiplier="1"
+                />
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="250dp"-->
+                <!--android:src="@mipmap/fox"-->
+                <!--app:layout_collapseParallaxMultiplier="1"/>-->
 
+
+
+            <!--压缩后的上方-->
             <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_grid_detail_act"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
+                android:layout_height="wrap_content"
                 app:layout_collapseMode="pin"
-                android:title="0000"
+                android:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:background="#FB7299"
                 >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/houtui"
-                    />
+                    <ImageView
+                        android:id="@+id/iv_back_grid_detail_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/houtui"
+                        app:layout_collapseParallaxMultiplier="1"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv44"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:drawablePadding="2dp"
+
+                        android:text="立即播放"
+                        android:textColor="#ffff"
+                        app:layout_collapseParallaxMultiplier="1"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/dianshi"
+                        android:layout_toLeftOf="@id/tv44"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="1.5dp"/>
+
+                </RelativeLayout>
+
+
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
-
-
     </android.support.design.widget.AppBarLayout>
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/houtui"
-        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#ffff">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_grid_detail_act"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            ></android.support.design.widget.TabLayout>
+
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@id/tl_grid_detail_act"
+            android:id="@+id/vp__grid_detail_act"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eaeaea"
+            ></android.support.v4.view.ViewPager>
+
+
+
+        <lanou.com.fakebilibili.area.view.CircleImageView
+            android:id="@+id/iv_float_grid_detail_act"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/bofangpress"
+            android:layout_marginTop="11dp"
+            android:scaleType="fitXY"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>

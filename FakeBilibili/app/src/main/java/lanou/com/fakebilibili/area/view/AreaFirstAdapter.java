@@ -10,10 +10,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
+import com.youth.banner.listener.OnBannerClickListener;
 import com.youth.banner.loader.ImageLoader;
 
 import java.util.ArrayList;
@@ -107,8 +109,8 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         }else {
 
             //Grid模式 Rv布局,注意第13位是横向的傻逼,第1位是个带banner的大哥
-            Banner banner1=holder.getView(R.id.banner);
-            banner1.setVisibility(View.GONE);
+            Banner nBanner=holder.getView(R.id.banner);
+            nBanner.setVisibility(View.GONE);
 
             TextView title=holder.getView(R.id.tv_frv_name);
             title.setText(areaFirstBean.getData().get(position-1).getTitle());
@@ -146,13 +148,17 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 }
                 banner.setImageLoader(new BannerLoader()).setImages(imageList).isAutoPlay(true).setDelayTime(3000).setIndicatorGravity(BannerConfig.RIGHT).start();
 
-                        banner.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
+                banner.setOnBannerClickListener(new OnBannerClickListener() {
+                    @Override
+                    public void OnBannerClick(int position) {
+                        Toast.makeText(context, ""+position, Toast.LENGTH_SHORT).show();
 
-                            //banner点击监听
-                            }
-                        });
+                        Intent intent=new Intent(context,AreaFirstNlineAct.class);
+                        String uri=areaFirstBean.getData().get(0).getBanner().getBottom().get(position-1).getUri();
+                        intent.putExtra("uri",uri);
+                        context.startActivity(intent);
+                    }
+                });
             }
 
             recyclerView.setLayoutManager(layoutManager);

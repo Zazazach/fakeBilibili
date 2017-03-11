@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:background="#eaeaea">
+
+    <TextView
+        android:id="@+id/tv_title_detail_left_fline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:textSize="18sp"
+        android:text="【H萌漫讯】 TO LOVE漫画完结? 东京食尸鬼闹出乌龙事件!"/>
+
+
+
+    <TextView
+        android:id="@+id/tv_num_left_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_detail_left_fline"
+        android:layout_alignLeft="@id/tv_title_detail_left_fline"
+        android:drawableLeft="@mipmap/bofang1"
+        android:text="10.3万"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="5dp"/>
+
+
+    <ImageView
+        android:id="@+id/co_left_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pinglun1"
+        android:layout_alignBottom="@id/tv_num_left_detail"
+        android:layout_toRightOf="@id/tv_num_left_detail"
+        android:layout_marginLeft="19dp"/>
+
+    <TextView
+        android:id="@+id/tv_num2_detail_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_detail_left_fline"
+        android:layout_toRightOf="@id/co_left_detail"
+        android:layout_alignBottom="@id/tv_num_left_detail"
+        android:text="1405"
+        android:paddingTop="2dp"
+        android:gravity="bottom"
+        android:layout_marginLeft="4dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_content_left_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_num_left_detail"
+        android:layout_marginTop="13dp"
+        android:text="这一期轮到天堂感冒了,大家要注意保暖啊,支持楼主别忘了投个币点赞哦~
+        本期互动话题'你要到过什么无力吐槽的动漫场景' "/>
+
+
+    <TextView
+        android:id="@+id/tv_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/fenxiang"
+        android:text="分享"
+        android:layout_below="@id/tv_content_left_detail"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="7dp"/>
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/b"
+        android:text="投硬币"
+        android:layout_below="@id/tv_content_left_detail"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/tv_share"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="7dp"/>
+
+    <TextView
+        android:id="@+id/tv_collect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/shoucang"
+        android:text="收藏"
+        android:layout_below="@id/tv_content_left_detail"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/tv_money"
+        android:layout_marginTop="20dp"
+        android:drawablePadding="7dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableTop="@mipmap/down"
+        android:text="缓存"
+        android:layout_below="@id/tv_content_left_detail"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/tv_collect"
+        android:drawablePadding="7dp"/>
+
+
+
+</RelativeLayout>
