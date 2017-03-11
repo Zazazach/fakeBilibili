@@ -22,4 +22,9 @@ public class LikeActivity extends BaseActivity {
     public void initData() {
 
     }
+
+    @Override
+    protected void bindEvent() {
+
+    }
 }
