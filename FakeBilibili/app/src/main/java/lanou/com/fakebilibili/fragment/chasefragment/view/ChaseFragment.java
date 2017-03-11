@@ -61,5 +61,7 @@ public class ChaseFragment extends BaseFragment {
     @Override
     protected void bindEvent() {
 
+        
+
     }
 }
