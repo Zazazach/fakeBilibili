@@ -1,25 +1,20 @@
 package lanou.com.fakebilibili.recommend;
-
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.recommend.model.Title;
-import lanou.com.fakebilibili.recommend.presenter.RecommendPresenter;
-import lanou.com.fakebilibili.recommend.view.IView;
 import lanou.com.fakebilibili.utils.BaseActivity;
 
 /**
  * Created by Parcelable on 17/3/9.
  */
 
-public class LikeActivity extends BaseActivity{
-    private ListView leftListView;
+public class LikeActivity extends BaseActivity {
+    private ListView leftListView,rightListView;
     private LikeLeftListViewAdapter leftListViewAdapter;
-    private Title title;
+    private String[] tTitles = {"动画","音乐","舞蹈","游戏","科技","生活","鬼畜","时尚","娱乐","电影","电视剧"};
+    private int pos = 0;
+
     @Override
     public int bindLayout() {
         return R.layout.activity_like;
@@ -28,34 +23,14 @@ public class LikeActivity extends BaseActivity{
     @Override
     public void initView() {
         leftListView = bindView(R.id.list_view_like_left);
-
+        rightListView = bindView(R.id.list_view_like_right);
     }
 
     @Override
     public void initData() {
-        List<Title> titles = new ArrayList<>();
-        Title title = new Title();
-        for (int i = 0; i < 11; i++) {
-            title.setTitles("动画");
-            title.setTitles("音乐");
-            title.setTitles("舞蹈");
-            title.setTitles("游戏");
-            title.setTitles("科技");
-            title.setTitles("生活");
-            title.setTitles("鬼畜");
-            title.setTitles("时尚");
-            title.setTitles("娱乐");
-            title.setTitles("电影");
-            title.setTitles("电视剧");
-
-            titles.add(title);
-        }
-
         leftListViewAdapter = new LikeLeftListViewAdapter(this);
-        leftListViewAdapter.setTitles(titles);
+        leftListViewAdapter.setTitles(tTitles);
         leftListView.setAdapter(leftListViewAdapter);
-
-
     }
 
     @Override
@@ -67,9 +42,38 @@ public class LikeActivity extends BaseActivity{
             }
         });
 
+        leftListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                pos = leftListViewAdapter.getIndex();
+                switch (pos) {
+                    case 0:
+                        break;
+                    case 1:
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    case 4:
+                        break;
+                    case 5:
+                        break;
+                    case 6:
+                        break;
+                    case 7:
+                        break;
+                    case 8:
+                        break;
+                    case 9:
+                        break;
+                    case 10:
+                        break;
+                    case 11:
+                        break;
+                }
+
+            }
+        });
     }
-
-
-
-
 }

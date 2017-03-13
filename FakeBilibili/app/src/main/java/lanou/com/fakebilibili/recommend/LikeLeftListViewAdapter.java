@@ -6,36 +6,38 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
-import java.util.List;
-
 import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.recommend.model.Title;
 
 /**
  * Created by Parcelable on 17/3/11.
  */
 
 public class LikeLeftListViewAdapter extends BaseAdapter {
-    private List<Title> titles;
+    private String[] titles;
     private Context context;
+    private int index = 0;
+
+    public int getIndex() {
+        return index;
+    }
 
     public LikeLeftListViewAdapter(Context context) {
         this.context = context;
     }
 
-    public void setTitles(List<Title> titles) {
+    public void setTitles(String[] titles) {
         this.titles = titles;
+        notifyDataSetChanged();
     }
 
     @Override
     public int getCount() {
-        return titles != null ? titles.size() : 0;
+        return titles != null ? titles.length : 0;
     }
 
     @Override
     public Object getItem(int position) {
-        return titles.get(position);
+        return titles[position];
     }
 
     @Override
@@ -45,6 +47,7 @@ public class LikeLeftListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        index = position;
         LeftViewHolder holder = null;
         if (convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.item_like_left_list_view,parent,false);
@@ -53,7 +56,7 @@ public class LikeLeftListViewAdapter extends BaseAdapter {
         }else {
             holder = (LeftViewHolder) convertView.getTag();
         }
-        holder.titleTv.setText(titles.get(position).getTitles());
+        holder.titleTv.setText(titles[position]);
 
         return convertView;
     }

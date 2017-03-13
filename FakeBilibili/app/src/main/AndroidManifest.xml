@@ -3,13 +3,21 @@
     package="lanou.com.fakebilibili">
 
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
 
     <application
@@ -35,14 +43,13 @@
             android:launchMode="singleTop"
 
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-        ></activity>
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
 
 
-
-
-        <activity android:name=".activity.LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
     </application>
 
