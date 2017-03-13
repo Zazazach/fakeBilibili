@@ -12,7 +12,10 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jaeger.library.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +40,7 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private ImageView loginNavIv,changeThemeNavIv;
-
+    private TextView loginNavTv;
     private boolean isNight = false;
 
     @Override
@@ -55,6 +58,8 @@ public class MainActivity extends BaseActivity {
 
 
     public void initView() {
+
+
         tabLayout=bindView(R.id.tl_act_main);
         viewPager=bindView(R.id.vp_act_main);
         drawerLayout = (DrawerLayout) findViewById(R.id.activity_main);
@@ -62,9 +67,13 @@ public class MainActivity extends BaseActivity {
         //初始化抽屉头视图
         View headView = navigationView.inflateHeaderView(R.layout.nav_header_main);
         loginNavIv = (ImageView) headView.findViewById(R.id.iv_login_nav_header);
+        loginNavTv = (TextView) headView.findViewById(R.id.tv_login_nav_header);
         changeThemeNavIv = (ImageView) headView.findViewById(R.id.iv_switch_nav_header);
 
-
+        //沉浸式状态栏
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
+        //抽屉的沉浸式状态栏
+        StatusBarUtil.setColorForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.day_title_bg));
     }
 
     @Override
@@ -94,6 +103,12 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this,LoginActivity.class));
             }
         });
+        loginNavTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            }
+        });
         changeThemeNavIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,7 +129,6 @@ public class MainActivity extends BaseActivity {
                 finish();
                 overridePendingTransition(R.anim.in_anim, 0);
                 startActivity(intent);
-                drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

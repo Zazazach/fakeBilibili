@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -17,6 +17,7 @@
         <item name="titleBgColor">@color/day_title_bg</item>
         <item name="imageValue">@mipmap/night</item>
         <item name="contentBg">@color/day_bg</item>
+
     </style>
 
     <style name="NightTheme" parent="AppTheme" >
@@ -25,6 +26,7 @@
         <item name="titleBgColor">@color/night_title_bg</item>
         <item name="imageValue">@mipmap/light</item>
         <item name="contentBg">@color/content_night_bg</item>
+
     </style>
 
 </resources>
