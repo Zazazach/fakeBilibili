@@ -1,11 +1,6 @@
 [
     {
-<<<<<<< HEAD
-        "merged": "/Users/dllo/Desktop/GitDemo/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
-        "source": "/Users/dllo/Desktop/GitDemo/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
-=======
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
->>>>>>> 5f4c6185481d516b0d428d8914b7db1a139ef8d5
+        "merged": "/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
+        "source": "/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
     }
 ]

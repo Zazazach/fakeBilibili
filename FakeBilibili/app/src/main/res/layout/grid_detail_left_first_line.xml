@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="6dp"
-    android:layout_marginRight="6dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
     android:background="#eaeaea">
 
     <TextView
@@ -70,7 +69,9 @@
         android:layout_below="@id/tv_content_left_detail"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
-        android:drawablePadding="7dp"/>
+        android:drawablePadding="7dp"
+        android:textSize="10sp"
+        android:layout_marginBottom="9dp"/>
 
     <TextView
         android:id="@+id/tv_money"
@@ -82,7 +83,8 @@
         android:layout_marginLeft="50dp"
         android:layout_toRightOf="@id/tv_share"
         android:layout_marginTop="20dp"
-        android:drawablePadding="7dp"/>
+        android:drawablePadding="7dp"
+        android:textSize="10sp"/>
 
     <TextView
         android:id="@+id/tv_collect"
@@ -95,6 +97,7 @@
         android:layout_toRightOf="@id/tv_money"
         android:layout_marginTop="20dp"
         android:drawablePadding="7dp"
+        android:textSize="10sp"
         />
 
     <TextView
@@ -103,6 +106,7 @@
         android:layout_height="wrap_content"
         android:drawableTop="@mipmap/down"
         android:text="缓存"
+        android:textSize="10sp"
         android:layout_below="@id/tv_content_left_detail"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="20dp"
