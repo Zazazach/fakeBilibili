@@ -42,8 +42,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="2"
-                app:tabSelectedTextColor="#ffffff"
-                app:tabTextColor="#aaaaaa"></android.support.design.widget.TabLayout>
+
+                app:tabTextColor="#ddd"
+                app:tabSelectedTextColor="#ffffff">
+            </android.support.design.widget.TabLayout>
+
+
         </LinearLayout>
 
         <android.support.v4.view.ViewPager

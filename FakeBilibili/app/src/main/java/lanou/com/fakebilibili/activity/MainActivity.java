@@ -14,8 +14,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+
+import android.widget.TextView;
+
 import android.widget.PopupWindow;
+
 import android.widget.Toast;
+
+import com.jaeger.library.StatusBarUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +43,12 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+
+
+    private TextView loginNavTv;
+
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
+
 
     private boolean isNight = false;
 
@@ -59,15 +70,30 @@ public class MainActivity extends BaseActivity {
 
     public void initView() {
 
+
+
+        tabLayout=bindView(R.id.tl_act_main);
+        viewPager=bindView(R.id.vp_act_main);
+
         tabLayout = bindView(R.id.tl_act_main);
         viewPager = bindView(R.id.vp_act_main);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.activity_main);
         navigationView = (NavigationView) findViewById(R.id.nav_main);
         //初始化抽屉头视图
         View headView = navigationView.inflateHeaderView(R.layout.nav_header_main);
         loginNavIv = (ImageView) headView.findViewById(R.id.iv_login_nav_header);
+        loginNavTv = (TextView) headView.findViewById(R.id.tv_login_nav_header);
         changeThemeNavIv = (ImageView) headView.findViewById(R.id.iv_switch_nav_header);
+
+
+        //沉浸式状态栏
+        StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
+        //抽屉的沉浸式状态栏
+        StatusBarUtil.setColorForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.day_title_bg));
+
         searchIv = bindView(R.id.iv_search_home_page);
+
 
     }
 
@@ -127,6 +153,12 @@ public class MainActivity extends BaseActivity {
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
+        loginNavTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            }
+        });
         changeThemeNavIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +179,6 @@ public class MainActivity extends BaseActivity {
                 finish();
                 overridePendingTransition(R.anim.in_anim, 0);
                 startActivity(intent);
-                drawerLayout.openDrawer(Gravity.LEFT);
             }
         });
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
