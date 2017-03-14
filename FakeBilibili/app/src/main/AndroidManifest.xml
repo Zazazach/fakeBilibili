@@ -2,23 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
-=======
 
-    <uses-permission android:name="android.permission.INTERNET"/>
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
-=======
 
     <uses-permission android:name="android.permission.INTERNET" />
 
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
 
     <application
         android:name=".app.MyApp"
@@ -41,25 +35,11 @@
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTop"
-<<<<<<< HEAD
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-=======
-
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"
-        ></activity>
-
-
-
-
-
-        <activity android:name=".activity.LoginActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
     </application>
 
 </manifest>
