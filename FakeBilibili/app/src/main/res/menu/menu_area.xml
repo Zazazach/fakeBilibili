@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/drawer_menu">
+        <item android:id="@+id/v0" android:icon="@mipmap/ic_launcher" android:title="第一个选项">
+
+        <menu >
+            <item android:id="@+id/v1" android:icon="@mipmap/ic_launcher" android:title="选项1"/>
+            <item android:id="@+id/v2" android:icon="@mipmap/ic_launcher" android:title="选项2"/>
+            <item android:id="@+id/v3" android:icon="@mipmap/ic_launcher" android:title="选项3"/>
+
+        </menu>
+
+    </item>
+    </group>
+
+    <group android:id="@+id/v4">
+        <item android:id="@+id/v5" android:title="第二个选项" android:icon="@mipmap/ic_launcher">
+           <menu>
+
+               <item android:id="@+id/v6" android:icon="@mipmap/ic_launcher" android:title="terminal st"></item>
+
+           </menu>
+
+
+        </item>
+    </group>
+</menu>

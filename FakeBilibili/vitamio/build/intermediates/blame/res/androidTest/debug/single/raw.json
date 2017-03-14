@@ -1,6 +1,11 @@
 [
     {
+<<<<<<< HEAD
+        "merged": "/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/raw/libarm.so",
+        "source": "/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/raw/libarm.so"
+=======
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/raw/libarm.so",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/raw/libarm.so"
+>>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
     }
 ]

@@ -1,12 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
     <style name="RecommendTabTextSize">
         <item name="android:textSize">@dimen/recommend_tab_text_size</item>
     </style>
@@ -17,20 +18,28 @@
         <item name="titleBgColor">@color/day_title_bg</item>
         <item name="imageValue">@mipmap/night</item>
         <item name="contentBg">@color/day_bg</item>
+
     </style>
 
-    <style name="NightTheme" parent="AppTheme" >
+    <style name="NightTheme" parent="AppTheme">
         <item name="textColor">@color/night_text</item>
         <item name="Background">@color/night_bg</item>
         <item name="titleBgColor">@color/night_title_bg</item>
         <item name="imageValue">@mipmap/light</item>
         <item name="contentBg">@color/content_night_bg</item>
+
     </style>
 
+<<<<<<< HEAD
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+=======
     <style name="AnimationFade">
         <!-- PopupWindow左右弹出的效果-->
         <item name="android:windowEnterAnimation">@anim/pop_in</item>
         <item name="android:windowExitAnimation">@anim/pop_out</item>
     </style>
+>>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
 
 </resources>

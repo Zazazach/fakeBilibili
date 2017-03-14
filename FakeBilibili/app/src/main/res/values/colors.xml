@@ -11,4 +11,6 @@
     <color name="night_bg">#2d2d2d</color>
     <color name="night_title_bg">#2d2d2d</color>
     <color name="content_night_bg">#232323</color>
+    <color name="line">#878787</color>
+    <color name="loginBg">#e9b9c8</color>
 </resources>
