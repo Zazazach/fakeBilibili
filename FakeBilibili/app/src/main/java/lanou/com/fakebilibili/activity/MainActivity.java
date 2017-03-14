@@ -85,14 +85,13 @@ public class MainActivity extends BaseActivity {
         loginNavIv = (ImageView) headView.findViewById(R.id.iv_login_nav_header);
         loginNavTv = (TextView) headView.findViewById(R.id.tv_login_nav_header);
         changeThemeNavIv = (ImageView) headView.findViewById(R.id.iv_switch_nav_header);
-
+        searchIv = bindView(R.id.iv_search_home_page);
 
         //沉浸式状态栏
         StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
         //抽屉的沉浸式状态栏
         StatusBarUtil.setColorForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.day_title_bg));
 
-        searchIv = bindView(R.id.iv_search_home_page);
 
 
     }
