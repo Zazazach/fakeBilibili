@@ -5,6 +5,8 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
+
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.finaldata.UrlData;
 import lanou.com.fakebilibili.recommend.model.Synthesize;
@@ -54,6 +56,12 @@ public class SynthesizeFragment extends BaseFragment implements IView{
                 Intent intent = new Intent(getContext(),SynthesizeContentActivity.class);
                 intent.putExtra("synthesizeContent",synthesizeContent.getDurl().get(pos));
                 startActivity(intent);
+            }
+
+            @Override
+            public void popJump(int pos) {
+                //TODO 弹出popUpWindow
+                Toast.makeText(getContext(), "dddd", Toast.LENGTH_SHORT).show();
             }
         });
 
