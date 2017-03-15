@@ -2,12 +2,18 @@ package lanou.com.fakebilibili.area.view;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,10 +24,13 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.listener.OnBannerClickListener;
 import com.youth.banner.loader.ImageLoader;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.ArrayList;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.area.modle.AreaFirstBean;
+import lanou.com.fakebilibili.ijk.IjkVideoView;
 import lanou.com.fakebilibili.utils.BaseViewHolder;
 
 /**
@@ -44,10 +53,22 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
     private int nLine=1;
     private int fRv=2;
     private IRvClick iRvClick;
+    private WmData wmData;
+    private static WindowManager windowManager;
+    private static View floatView;
+    private String path = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
 
     public void setiRvClick(IRvClick iRvClick) {
         this.iRvClick = iRvClick;
         notifyDataSetChanged();
+    }
+
+    public static WindowManager getWindowManager() {
+        return windowManager;
+    }
+
+    public static View getFloatView() {
+        return floatView;
     }
 
     public void setAreaFirstBean(AreaFirstBean areaFirstBean) {
@@ -89,9 +110,16 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 }
             };
 
+
             firstRv.setLayoutManager(manager);
             firstRv.setAdapter(adapter);
 
+            adapter.setiRvClick(new IRvClick() {
+                @Override
+                public void clickMe(int position) {
+                   setFloatScreen();
+                }
+            });
 
         }else if (type==nLine){
             //常规布局,一幅图而已
@@ -161,6 +189,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 });
             }
 
+
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(firstFrvAdpter);
             //里层的Grid模式适配器监听,也是把数据传入当中
@@ -170,6 +199,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
 
                     Intent intent=new Intent(context,AreaGridDetailAct.class);
                     context.startActivity(intent);
+
                 }
             });
 
@@ -203,4 +233,73 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
             Glide.with(context).load(path).into(imageView);
         }
     }
+
+
+    private void setFloatScreen() {
+
+        floatView = LayoutInflater.from(context).inflate(R.layout.floatscreen, null,false);
+
+        IjkVideoView videoView = (IjkVideoView) floatView.findViewById(R.id.ijk_synthesize_content);
+        Button button= (Button) floatView.findViewById(R.id.asdasda);
+
+
+        videoView.setVideoURI(Uri.parse(path));
+        videoView.start();
+        windowManager = (WindowManager) context.getSystemService(context.WINDOW_SERVICE);
+
+        final WindowManager.LayoutParams params=new WindowManager.LayoutParams();
+
+        params.type=WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
+        params.format= PixelFormat.RGB_565;
+        params.flags=WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+
+        params.width=800;
+        params.height=300;
+
+        floatView.setOnTouchListener(new View.OnTouchListener() {
+            int lastX,lastY;
+            int paramX,paramY;
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()){
+
+                    case MotionEvent.ACTION_DOWN:
+                        lastX= (int) event.getRawX();
+                        lastY= (int) event.getRawY();
+
+                        paramX=params.x;
+                        paramY=params.y;
+                        break;
+
+                    case MotionEvent.ACTION_MOVE:
+                        int dx= (int) (event.getRawX()-lastX);
+                        int dy= (int) (event.getRawY()-lastY);
+
+                        params.x=paramX+dx;
+                        params.y=paramY+dy;
+
+                        windowManager.updateViewLayout(floatView,params);
+                        break;
+                }
+
+                return true;
+            }
+        });
+
+        windowManager.addView(floatView,params);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                context.startActivity(new Intent(context,AreaGridDetailAct.class));
+                windowManager.removeViewImmediate(floatView);
+            }
+        });
+
+
+//        wmData.setwmData(windowManager,floatView);
+    }
+
+
 }

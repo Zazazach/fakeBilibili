@@ -52,13 +52,15 @@
                 >
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="#FB7299">
 
                     <ImageView
                         android:id="@+id/iv_back_grid_detail_act"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/houtui"
+                        android:background="#FB7299"
                         app:layout_collapseParallaxMultiplier="1"
                         android:layout_centerVertical="true"
                         />
@@ -69,7 +71,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
                         android:drawablePadding="2dp"
-
+                        android:background="#FB7299"
                         android:text="立即播放"
                         android:textColor="#ffff"
                         app:layout_collapseParallaxMultiplier="1"
@@ -97,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:background="#ffff">
+        android:background="#eaeaea">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tl_grid_detail_act"
@@ -138,9 +140,8 @@
         android:id="@+id/nav"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/drawer_header"
         app:menu="@menu/menu_area"
         android:layout_gravity="right"
-        android:fitsSystemWindows="false"
+        android:fitsSystemWindows="true"
         />
 </android.support.v4.widget.DrawerLayout>

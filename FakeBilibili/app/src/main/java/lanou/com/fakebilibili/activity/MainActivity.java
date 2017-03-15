@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -23,12 +24,18 @@ import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import lanou.com.fakebilibili.app.MyApp;
+import lanou.com.fakebilibili.area.view.AreaFirstAdapter;
 import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.area.view.WmData;
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 import lanou.com.fakebilibili.utils.BaseActivity;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
@@ -43,17 +50,15 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-
-
     private TextView loginNavTv;
-
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
-
-
     private boolean isNight = false;
-
     private PopupWindow popupWindow;
     private WindowManager.LayoutParams lp;
+    private AreaFragment areaFragment;
+    private WindowManager windowManager;
+    private View floatView;
+
 
     @Override
     public int bindLayout() {
@@ -99,6 +104,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+
         lp = getWindow().getAttributes();
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
@@ -106,8 +112,10 @@ public class MainActivity extends BaseActivity {
 
         list.add(new RecommendFragment());
         list.add(new ChaseFragment());
-        list.add(new AreaFragment());
+        areaFragment = new AreaFragment();
+        list.add(areaFragment);
 
+        viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         adapter.setList(list);
@@ -205,6 +213,18 @@ public class MainActivity extends BaseActivity {
             }
         });
     }
+
+
+    //windowmanager退出
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+       AreaFirstAdapter.getWindowManager().removeView(AreaFirstAdapter.getFloatView());
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+
+
 
 
 }

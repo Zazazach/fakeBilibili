@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -59,4 +59,6 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     //状态栏第三方工具
     compile 'com.jaeger.statusbaruitl:library:1.0.0'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
 }

@@ -3,44 +3,13 @@
     package="lanou.com.fakebilibili">
 
 
-    <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    <uses-permission android:name="android.permission.INTERNET" />
-=======
-
-    <uses-permission android:name="android.permission.INTERNET"/>
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
-
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
 
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
-<<<<<<< HEAD
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
 
     <application
         android:name=".app.MyApp"
@@ -63,33 +32,18 @@
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTop"
-<<<<<<< HEAD
-=======
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-<<<<<<< HEAD
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
-        <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
         <activity
             android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-=======
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
 
 
+        <activity android:name=".area.view.LoadingAct"></activity>
 
 
-<<<<<<< HEAD
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
     </application>
 
 </manifest>

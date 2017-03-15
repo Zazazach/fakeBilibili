@@ -6,11 +6,13 @@
     >
 
     <lanou.com.fakebilibili.area.view.CircleImageView
+        android:id="@+id/aaaa"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:src="@mipmap/ss"
         android:layout_centerVertical="true"
-        android:layout_margin="20dp"/>
+        android:layout_margin="20dp"
+        android:background="#f88"/>
 
     <!--<ImageView-->
         <!--android:id="@+id/mode"-->
