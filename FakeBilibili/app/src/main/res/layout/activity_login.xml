@@ -5,9 +5,7 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipToPadding="true"
-    android:fitsSystemWindows="true"
-    tools:context="lanou.com.fakebilibili.activity.LoginActivity">
+    tools:context=".activity.LoginActivity">
 
     <RelativeLayout
         android:id="@+id/rl_title_login"

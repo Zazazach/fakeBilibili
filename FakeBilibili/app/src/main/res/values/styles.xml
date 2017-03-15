@@ -29,11 +29,24 @@
         <item name="contentBg">@color/content_night_bg</item>
     </style>
 
+<<<<<<< HEAD
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
+=======
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+>>>>>>> 139996a05078c3e68111893e8ee6c733db1e4077
     <style name="AnimationFade">
         <!-- PopupWindow左右弹出的效果-->
         <item name="android:windowEnterAnimation">@anim/pop_in</item>
         <item name="android:windowExitAnimation">@anim/pop_out</item>
     </style>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 139996a05078c3e68111893e8ee6c733db1e4077
 </resources>

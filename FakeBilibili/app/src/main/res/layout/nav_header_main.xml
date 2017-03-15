@@ -11,8 +11,7 @@
     <ImageView
         android:id="@+id/iv_login_nav_header"
         android:layout_width="60dp"
-        android:layout_height="60dp"
-         />
+        android:layout_height="60dp" />
 
     <TextView
         android:id="@+id/tv_login_nav_header"
