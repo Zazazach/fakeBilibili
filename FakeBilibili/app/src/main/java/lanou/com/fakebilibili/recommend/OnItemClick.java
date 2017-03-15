@@ -6,4 +6,5 @@ package lanou.com.fakebilibili.recommend;
 
 public interface OnItemClick {
     void Jump(int pos);
+    void popJump(int pos);
 }

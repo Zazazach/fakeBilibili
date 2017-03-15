@@ -1,6 +1,7 @@
 package lanou.com.fakebilibili.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -21,13 +23,21 @@ import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
+import com.uuzuche.lib_zxing.activity.CaptureActivity;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import lanou.com.fakebilibili.app.MyApp;
+import lanou.com.fakebilibili.area.view.AreaFirstAdapter;
 import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.area.view.WmData;
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 import lanou.com.fakebilibili.utils.BaseActivity;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
@@ -42,16 +52,25 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+<<<<<<< HEAD
+=======
+
+    private final int REQUEST_CODE  = 5;
 
 
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
     private TextView loginNavTv;
-
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
-
-
     private boolean isNight = false;
-
     private PopupWindow popupWindow;
+<<<<<<< HEAD
+    private WindowManager.LayoutParams lp;
+    private AreaFragment areaFragment;
+    private WindowManager windowManager;
+    private View floatView;
+
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
     @Override
     public int bindLayout() {
@@ -67,8 +86,6 @@ public class MainActivity extends BaseActivity {
 
 
     public void initView() {
-
-
 
         tabLayout=bindView(R.id.tl_act_main);
         viewPager=bindView(R.id.vp_act_main);
@@ -96,14 +113,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+<<<<<<< HEAD
+
+        lp = getWindow().getAttributes();
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
 
         list.add(new RecommendFragment());
         list.add(new ChaseFragment());
-        list.add(new AreaFragment());
+        areaFragment = new AreaFragment();
+        list.add(areaFragment);
 
+        viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         adapter.setList(list);
@@ -114,6 +138,17 @@ public class MainActivity extends BaseActivity {
     //对popUpWindow进行一些初始化的设置
     protected void initPopUpWindow() {
         View popView = LayoutInflater.from(this).inflate(R.layout.pop_search_home_page, null);
+
+        ImageView qrcodeIv = (ImageView) popView.findViewById(R.id.iv_qr_code_search_home_page);
+        //扫描二维码
+        qrcodeIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
         popupWindow = new PopupWindow(popView, 1300, 130, true);
         popupWindow.setAnimationStyle(R.style.AnimationFade);
         popView.setOnTouchListener(new View.OnTouchListener() {
@@ -191,11 +226,45 @@ public class MainActivity extends BaseActivity {
                 //点击显示搜索栏
                 getPopUpWindow();
 
-                popupWindow.showAtLocation(findViewById(R.id.lay_out_pop_home_page), Gravity.RIGHT, 0, -600);
+                popupWindow.showAtLocation(findViewById(R.id.lay_out_pop_home_page), Gravity.RIGHT, 0, -750);
 
             }
         });
     }
 
+<<<<<<< HEAD
 
+    //windowmanager退出
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+       AreaFirstAdapter.getWindowManager().removeView(AreaFirstAdapter.getFloatView());
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+
+
+
+
+=======
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE) {
+            //处理扫描结果（在界面上显示）
+            if (null != data) {
+                Bundle bundle = data.getExtras();
+                if (bundle == null) {
+                    return;
+                }
+                if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
+                    String result = bundle.getString(CodeUtils.RESULT_STRING);
+                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+                } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
+                    Toast.makeText(MainActivity.this, "解析二维码失败", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+    }
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 }

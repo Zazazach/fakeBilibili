@@ -1,15 +1,25 @@
 package lanou.com.fakebilibili.area.view;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.net.Uri;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.Button;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.area.modle.AreaFirstBean;
 import lanou.com.fakebilibili.area.presenter.MyPrexenter;
+import lanou.com.fakebilibili.ijk.IjkVideoView;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
+import static android.content.Context.WINDOW_SERVICE;
 import static lanou.com.fakebilibili.area.modle.UrlData.AREA_FIRST;
 
 /**
@@ -59,12 +69,19 @@ public class AreaFragment extends BaseFragment implements IView {
             }
         });
 
+
+
     }
 
     @Override
     protected void bindEvent() {
 
+
     }
+
+
+
+
 
 
     @Override
@@ -87,4 +104,9 @@ public class AreaFragment extends BaseFragment implements IView {
         intent.putExtra("uri",areaFirstBean.getData().get(position).getBody().get(0).getUri());
         startActivity(intent);
     }
+
+
+
+
+
 }

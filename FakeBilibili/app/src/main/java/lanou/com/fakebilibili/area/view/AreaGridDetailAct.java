@@ -2,6 +2,9 @@ package lanou.com.fakebilibili.area.view;
 
 
 import android.animation.ValueAnimator;
+import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,6 +24,7 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
@@ -61,71 +65,40 @@ public class AreaGridDetailAct extends AppCompatActivity {
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private CheckBox checkBox;
+    private boolean isNight=false;
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Vitamio.initialize(this);
+        sharedPreferences=getPreferences(MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        //设置夜间模式
+        if (sharedPreferences.getInt("theme",0)!=0){
+            setTheme(sharedPreferences.getInt("theme",0));
+        }
+
+        Log.d("AreaGridDetailAct", "sharedPreferences.getInt " + sharedPreferences.getInt("theme", 0));
         setContentView(R.layout.area_grid_detail_act);
-        final VideoView videoView = (VideoView) findViewById(R.id.surface_view);
-        imageView = (CircleImageView) findViewById(R.id.iv_float_grid_detail_act);
-        back= (ImageView) findViewById(R.id.iv_back_grid_detail_act);
-        videoView.setVideoURI(Uri.parse(path));
-//           TODO 视频管理先放一下
-//            MediaController controller = new MediaController(this);
-//            videoView.setMediaController(controller);
-
-        videoView.start();
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d("AreaGridDetailAct", "videoView.isPlaying():" + videoView.isPlaying());
-                if (videoView.isPlaying()) {
-                    videoView.pause();
-                }else {
-                    videoView.resume();
-                }
-            }
-        });
-
-
-        checkBox= (CheckBox) findViewById(R.id.mode);
-
-        drawerLayout= (DrawerLayout) findViewById(R.id.drawerer);
-        navigationView= (NavigationView) findViewById(R.id.nav);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()){
-                    case R.id.rv_menu:
-                        Toast.makeText(AreaGridDetailAct.this, "11", Toast.LENGTH_SHORT).show();
-                        break;
-                    case R.id.mode:
-
-                        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                            @Override
-                            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                                if (isChecked){
-                                    checkBox.setChecked(false);
-                                   // TODO 夜间模式
-                                }else {
-                                    checkBox.setChecked(true);
-                                }
-                            }
-                        });
-                        break;
-                }
-                return false;
-            }
-        });
 
 
 
+        vitaminoPlayer();
+
+        drawerSetting();
 
 
+        fragmentArea();
 
 
+    }
+
+    private void fragmentArea() {
+        //视频下方的区域
 
         viewPager= (ViewPager) findViewById(R.id.vp__grid_detail_act);
         tabLayout= (TabLayout) findViewById(R.id.tl_grid_detail_act);
@@ -148,6 +121,96 @@ public class AreaGridDetailAct extends AppCompatActivity {
         });
 
         EventBus.getDefault().register(this);
+    }
+
+    private void drawerSetting() {
+        //抽屉布局的功能实现  点击 夜间模式
+        drawerLayout= (DrawerLayout) findViewById(R.id.drawerer);
+        navigationView= (NavigationView) findViewById(R.id.nav);
+
+
+        //通过这种方法 来吧header的布局引过来 来设置点击监听
+        // style 以int形式, 是否点击ischecked 存入sp
+        View head=navigationView.inflateHeaderView(R.layout.drawer_header);
+        checkBox= (CheckBox) head.findViewById(R.id.mode);
+        if (sharedPreferences.getInt("checked",1)==1){
+            checkBox.setChecked(true);
+            Log.d("AreaGridDetailAct", "1111");
+        }else {
+            checkBox.setChecked(false);
+            Log.d("AreaGridDetailAct", "2222");
+        }
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+
+                if (isChecked){
+                    setTheme(R.style.area_nighttime);
+                    isNight=true;
+                    editor.clear();
+                    editor.putInt("theme",R.style.area_nighttime);
+                    editor.putInt("checked",1);
+                    editor.commit();
+                    //为了重新运行到onCreate
+                    Intent intent=new Intent(AreaGridDetailAct.this, AreaGridDetailAct.class);
+                    finish();
+                    startActivity(intent);
+                }else {
+                    setTheme(R.style.area_daytime);
+                    isNight=false;
+                    editor.clear();
+                    editor.putInt("theme",R.style.area_daytime);
+                    editor.putInt("checked",0);
+                    editor.commit();
+
+                    Intent intent=new Intent(AreaGridDetailAct.this, AreaGridDetailAct.class);
+                    finish();
+                    startActivity(intent);
+
+                }
+
+            }
+        });
+
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.v1:
+                        Log.d("AreaGridDetailAct", "v1");
+                        break;
+                    case R.id.v2:
+                        Log.d("AreaGridDetailAct", "v2");
+                        break;
+                }
+                return false;
+            }
+        });
+    }
+
+    private void vitaminoPlayer() {
+        final VideoView videoView = (VideoView) findViewById(R.id.surface_view);
+        imageView = (CircleImageView) findViewById(R.id.iv_float_grid_detail_act);
+        back= (ImageView) findViewById(R.id.iv_back_grid_detail_act);
+        videoView.setVideoURI(Uri.parse(path));
+//           TODO 视频管理先放一下
+//            MediaController controller = new MediaController(this);
+//            videoView.setMediaController(controller);
+
+        videoView.start();
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("AreaGridDetailAct", "videoView.isPlaying():" + videoView.isPlaying());
+                if (videoView.isPlaying()) {
+                    videoView.pause();
+                }else {
+                    videoView.resume();
+                }
+            }
+        });
     }
 
 

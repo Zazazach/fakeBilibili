@@ -4,7 +4,7 @@
     android:layout_marginRight="6dp"
     android:layout_marginTop="6dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="170dp"
     >
 
 
@@ -38,7 +38,7 @@
     <ImageView
         android:id="@+id/iv_area_first_nline"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="120dp"
         android:src="@mipmap/qqpic"
         android:layout_below="@id/iv_nline"
         android:layout_marginTop="10dp"

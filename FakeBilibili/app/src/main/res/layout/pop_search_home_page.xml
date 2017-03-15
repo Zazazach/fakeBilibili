@@ -23,7 +23,7 @@
 
     <EditText
         android:background="@null"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:id="@+id/et_search_home_page"
         android:layout_width="230dp"
