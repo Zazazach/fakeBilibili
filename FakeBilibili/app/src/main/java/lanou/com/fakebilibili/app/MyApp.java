@@ -23,6 +23,8 @@ package lanou.com.fakebilibili.app;
 import android.app.Application;
 import android.content.Context;
 
+import com.uuzuche.lib_zxing.activity.ZXingLibrary;
+
 import lanou.com.fakebilibili.activity.navtheme.AppConfig;
 
 /**
@@ -37,6 +39,7 @@ public class MyApp extends Application{
         super.onCreate();
         context = getApplicationContext();
         appConfig = new AppConfig();
+        ZXingLibrary.initDisplayOpinion(this);
     }
 
     public static Context getContext() {

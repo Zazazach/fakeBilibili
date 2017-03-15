@@ -1,6 +1,7 @@
 package lanou.com.fakebilibili.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -13,7 +14,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 import android.widget.TextView;
@@ -23,6 +23,8 @@ import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.jaeger.library.StatusBarUtil;
+import com.uuzuche.lib_zxing.activity.CaptureActivity;
+import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -50,15 +52,25 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+<<<<<<< HEAD
+=======
+
+    private final int REQUEST_CODE  = 5;
+
+
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
+<<<<<<< HEAD
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
     private View floatView;
 
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
     @Override
     public int bindLayout() {
@@ -75,8 +87,6 @@ public class MainActivity extends BaseActivity {
 
     public void initView() {
 
-
-
         tabLayout=bindView(R.id.tl_act_main);
         viewPager=bindView(R.id.vp_act_main);
 
@@ -90,22 +100,24 @@ public class MainActivity extends BaseActivity {
         loginNavIv = (ImageView) headView.findViewById(R.id.iv_login_nav_header);
         loginNavTv = (TextView) headView.findViewById(R.id.tv_login_nav_header);
         changeThemeNavIv = (ImageView) headView.findViewById(R.id.iv_switch_nav_header);
-
+        searchIv = bindView(R.id.iv_search_home_page);
 
         //沉浸式状态栏
         StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
         //抽屉的沉浸式状态栏
         StatusBarUtil.setColorForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.day_title_bg));
 
-        searchIv = bindView(R.id.iv_search_home_page);
 
 
     }
 
     @Override
     public void initData() {
+<<<<<<< HEAD
 
         lp = getWindow().getAttributes();
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
@@ -126,6 +138,17 @@ public class MainActivity extends BaseActivity {
     //对popUpWindow进行一些初始化的设置
     protected void initPopUpWindow() {
         View popView = LayoutInflater.from(this).inflate(R.layout.pop_search_home_page, null);
+
+        ImageView qrcodeIv = (ImageView) popView.findViewById(R.id.iv_qr_code_search_home_page);
+        //扫描二维码
+        qrcodeIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
+                startActivityForResult(intent, REQUEST_CODE);
+            }
+        });
+
         popupWindow = new PopupWindow(popView, 1300, 130, true);
         popupWindow.setAnimationStyle(R.style.AnimationFade);
         popView.setOnTouchListener(new View.OnTouchListener() {
@@ -133,7 +156,6 @@ public class MainActivity extends BaseActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (popupWindow != null && popupWindow.isShowing()) {
                     popupWindow.dismiss();
-                    lp.alpha = 1;
                     popupWindow = null;
                 }
                 return false;
@@ -146,7 +168,6 @@ public class MainActivity extends BaseActivity {
     private void getPopUpWindow() {
         if (popupWindow != null) {
             popupWindow.dismiss();
-            lp.alpha = 1;
         } else {
             initPopUpWindow();
         }
@@ -205,15 +226,13 @@ public class MainActivity extends BaseActivity {
                 //点击显示搜索栏
                 getPopUpWindow();
 
-                popupWindow.showAtLocation(findViewById(R.id.lay_out_pop_home_page), Gravity.RIGHT, 0, -600);
-
-
-                lp.alpha = 0.7f;
+                popupWindow.showAtLocation(findViewById(R.id.lay_out_pop_home_page), Gravity.RIGHT, 0, -750);
 
             }
         });
     }
 
+<<<<<<< HEAD
 
     //windowmanager退出
     @Override
@@ -227,4 +246,25 @@ public class MainActivity extends BaseActivity {
 
 
 
+=======
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE) {
+            //处理扫描结果（在界面上显示）
+            if (null != data) {
+                Bundle bundle = data.getExtras();
+                if (bundle == null) {
+                    return;
+                }
+                if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
+                    String result = bundle.getString(CodeUtils.RESULT_STRING);
+                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+                } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
+                    Toast.makeText(MainActivity.this, "解析二维码失败", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+    }
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 }

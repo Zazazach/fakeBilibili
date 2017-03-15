@@ -61,4 +61,9 @@ dependencies {
     compile 'com.jaeger.statusbaruitl:library:1.0.0'
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+<<<<<<< HEAD
+=======
+    compile files('libs/core-3.3.0.jar')
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 }
