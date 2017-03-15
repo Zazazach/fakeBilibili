@@ -6,7 +6,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,11 +28,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
 
     <application
         android:name=".app.MyApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/giftalk"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -41,13 +52,16 @@
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
             android:launchMode="singleTop"
+
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
+            android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
             android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
 
 
+        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
+        <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
 
 
     </application>

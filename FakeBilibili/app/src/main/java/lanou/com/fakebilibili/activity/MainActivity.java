@@ -12,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageView;
 
 import android.widget.TextView;
@@ -53,7 +52,6 @@ public class MainActivity extends BaseActivity {
     private boolean isNight = false;
 
     private PopupWindow popupWindow;
-    private WindowManager.LayoutParams lp;
 
     @Override
     public int bindLayout() {
@@ -98,7 +96,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        lp = getWindow().getAttributes();
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
@@ -124,7 +121,6 @@ public class MainActivity extends BaseActivity {
             public boolean onTouch(View v, MotionEvent event) {
                 if (popupWindow != null && popupWindow.isShowing()) {
                     popupWindow.dismiss();
-                    lp.alpha = 1;
                     popupWindow = null;
                 }
                 return false;
@@ -137,7 +133,6 @@ public class MainActivity extends BaseActivity {
     private void getPopUpWindow() {
         if (popupWindow != null) {
             popupWindow.dismiss();
-            lp.alpha = 1;
         } else {
             initPopUpWindow();
         }
@@ -197,9 +192,6 @@ public class MainActivity extends BaseActivity {
                 getPopUpWindow();
 
                 popupWindow.showAtLocation(findViewById(R.id.lay_out_pop_home_page), Gravity.RIGHT, 0, -600);
-
-
-                lp.alpha = 0.7f;
 
             }
         });
