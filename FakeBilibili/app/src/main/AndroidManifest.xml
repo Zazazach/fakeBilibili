@@ -2,41 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
-<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
-=======
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
->>>>>>> 139996a05078c3e68111893e8ee6c733db1e4077
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
-=======
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
->>>>>>> 139996a05078c3e68111893e8ee6c733db1e4077
 
     <application
         android:name=".app.MyApp"
@@ -58,28 +33,13 @@
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-<<<<<<< HEAD
             android:launchMode="singleTop"/>
 
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
-=======
-            android:launchMode="singleTop"
-
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
-
-        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
-        <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
-
->>>>>>> 139996a05078c3e68111893e8ee6c733db1e4077
-
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTop"/>
     </application>
 
 </manifest>
