@@ -8,13 +8,13 @@
     tools:context=".activity.LoginActivity">
 
     <RelativeLayout
-        android:id="@+id/rl_title_login"
+        android:id="@+id/rl_title_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/titleBgColor">
 
         <ImageView
-            android:id="@+id/iv_back_login"
+            android:id="@+id/iv_back_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -24,7 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/iv_back_login"
+            android:layout_toRightOf="@id/iv_back_register"
             android:text="登录"
             android:textColor="@color/day_bg" />
 
@@ -43,7 +43,7 @@
         android:id="@+id/iv_open_and_close"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@id/rl_title_login"
+        android:layout_below="@id/rl_title_register"
         android:scaleType="fitXY"
         android:src="@mipmap/open_eye" />
 

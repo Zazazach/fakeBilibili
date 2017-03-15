@@ -1,15 +1,24 @@
 package lanou.com.fakebilibili.activity;
 
+import android.content.Intent;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jaeger.library.StatusBarUtil;
+import com.mob.tools.FakeActivity;
 
+import java.lang.reflect.Field;
+import java.util.HashMap;
+
+import cn.smssdk.EventHandler;
+import cn.smssdk.SMSSDK;
+import cn.smssdk.gui.RegisterPage;
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.app.MyApp;
 import lanou.com.fakebilibili.utils.BaseActivity;
@@ -17,7 +26,10 @@ import lanou.com.fakebilibili.utils.BaseActivity;
 public class LoginActivity extends BaseActivity {
     private EditText userEt,passwordEt;
     private ImageView openCloseIv,backIv, userIconIv, passwordIconIv,userLineIv,passwordLineIv;
-    private TextView loginTv;
+    private TextView loginTv,registerTv;
+
+
+
     @Override
     public int bindLayout() {
         if(MyApp.appConfig.isNighTheme()){
@@ -30,7 +42,7 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        backIv = bindView(R.id.iv_back_login);
+        backIv = bindView(R.id.iv_back_register);
         openCloseIv = bindView(R.id.iv_open_and_close);
         loginTv = bindView(R.id.tv_login_login);
         userEt = bindView(R.id.et_user_login);
@@ -39,6 +51,7 @@ public class LoginActivity extends BaseActivity {
         passwordEt = bindView(R.id.et_password_login);
         passwordIconIv = bindView(R.id.iv_password_icon_login);
         passwordLineIv = bindView(R.id.iv_line_password_login);
+        registerTv = bindView(R.id.tv_register_login);
         StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
     }
 
@@ -113,6 +126,36 @@ public class LoginActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        registerTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                // 打开注册页面
+//                RegisterPage registerPage = new RegisterPage();
+//                registerPage.setRegisterCallback(new EventHandler() {
+//                    public void afterEvent(int event, int result, Object data) {
+//                        // 解析注册结果
+//                        if (result == SMSSDK.RESULT_COMPLETE) {
+//                            @SuppressWarnings("unchecked")
+//                            HashMap<String,Object> phoneMap = (HashMap<String, Object>) data;
+//                            String country = (String) phoneMap.get("country");
+//                            String phone = (String) phoneMap.get("phone");
+//                            // 提交用户信息
+////                            registerUser(country, phone);
+//                        }
+//                    }
+//                });
+//                registerPage.show(LoginActivity.this);
+                try {
+                    Field shellClass = FakeActivity.class.getDeclaredField("shellClass");
+                    Log.d("LoginActivity", shellClass.getType().getTypeParameters()[0].getName());
+//                    Log.d("LoginActivity", FakeActivity.class.getDeclaredField("shellClass"));
+                } catch (NoSuchFieldException e) {
+                    Log.d("LoginActivity", "null");
+                    e.printStackTrace();
+                }
             }
         });
 
