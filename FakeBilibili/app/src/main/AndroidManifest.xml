@@ -2,58 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
-<<<<<<< HEAD
-=======
-
     <uses-permission android:name="android.permission.INTERNET" />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
-    <uses-permission android:name="android.permission.INTERNET" />
-
-<<<<<<< HEAD
-    <uses-permission android:name="android.permission.INTERNET" />
-=======
-    <uses-permission android:name="android.permission.INTERNET"/>
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
-
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
-    <uses-permission android:name="android.permission.INTERNET" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
-    <uses-permission android:name="android.permission.INTERNET" />
-
-<<<<<<< HEAD
-=======
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-<<<<<<< HEAD
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
-
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
 
     <application
         android:name=".app.MyApp"
@@ -75,40 +28,13 @@
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-            android:launchMode="singleTop"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
+            android:launchMode="singleTop"/>
 
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
+        <activity
+            android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-<<<<<<< HEAD
-            android:windowSoftInputMode="stateAlwaysHidden" />
-
-        <!-- android:theme="@android:style/Theme.NoTitleBar" -->
-        <!-- android:windowSoftInputMode="stateAlwaysHidden" /> -->
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-=======
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
-        <activity
-            android:name=".activity.LoginActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-<<<<<<< HEAD
-=======
 
-
-
-
-<<<<<<< HEAD
->>>>>>> 2e591fc33b6fe42ff2fa69211a1557e157ebe50e
->>>>>>> f411d7fb30f844bbd7949afa2d584c1682f8e25b
-=======
->>>>>>> 5a76528c2adc5bc1edc706992d6d7e728dc2b433
->>>>>>> b8bfe0040a385b69a8f69aeb355f4e053ce2408d
     </application>
 
 </manifest>

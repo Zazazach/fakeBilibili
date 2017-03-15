@@ -68,8 +68,6 @@ public class MainActivity extends BaseActivity {
 
     public void initView() {
 
-
-
         tabLayout=bindView(R.id.tl_act_main);
         viewPager=bindView(R.id.vp_act_main);
 
