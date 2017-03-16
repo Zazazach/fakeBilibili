@@ -71,7 +71,7 @@ public class RegisterActivity extends AppCompatActivity {
         };
         SMSSDK.registerEventHandler(eh);
         SMSSDK.getSupportedCountries();
-        SMSSDK.getVerificationCode("+86", "18624269142", new OnSendMessageHandler() {
+        SMSSDK.getVerificationCode("+86", "18641116968", new OnSendMessageHandler() {
             @Override
             public boolean onSendMessage(String s, String s1) {
                 Log.d("RegisterActivity", s);
