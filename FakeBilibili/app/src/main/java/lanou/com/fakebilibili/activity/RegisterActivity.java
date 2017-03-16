@@ -64,20 +64,18 @@ public class RegisterActivity extends AppCompatActivity {
         EventHandler eh = new EventHandler(){
             @Override
             public void afterEvent(int i, int i1, Object o) {
-                if(i == SMSSDK.EVENT_GET_CONTACTS){
-                    Log.d("RegisterActivity", o.getClass().getName());
+                if (i1 == SMSSDK.RESULT_COMPLETE){
+                    //回调完成
+                    if(i == SMSSDK.EVENT_GET_SUPPORTED_COUNTRIES){
+                    }
                 }
+
             }
         };
         SMSSDK.registerEventHandler(eh);
+        //获取短信目前支持的国家列表
         SMSSDK.getSupportedCountries();
-        SMSSDK.getVerificationCode("+86", "18641116968", new OnSendMessageHandler() {
-            @Override
-            public boolean onSendMessage(String s, String s1) {
-                Log.d("RegisterActivity", s);
-                return false;
-            }
-        });
+
     }
 
     @OnClick({R.id.iv_back_register, R.id.rl_title_register, R.id.tv_countries_and_phone_register, R.id.tv_country_register, R.id.rl_countries_register, R.id.tv_choose_country, R.id.btn_get_code_register})
@@ -95,7 +93,22 @@ public class RegisterActivity extends AppCompatActivity {
             case R.id.tv_choose_country:
                 break;
             case R.id.btn_get_code_register:
+                //提交短信验证码 在监听中返回
+                SMSSDK.getVerificationCode("+86", "18624269142", new OnSendMessageHandler() {
+                    @Override
+                    public boolean onSendMessage(String s, String s1) {
+                        Log.d("RegisterActivity", s);
+                        return false;
+                    }
+                });
                 break;
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //必须配套使用 否则可能造成内存泄漏
+        SMSSDK.unregisterAllEventHandler();
     }
 }
