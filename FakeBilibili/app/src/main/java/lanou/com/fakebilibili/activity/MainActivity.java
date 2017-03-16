@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -25,12 +26,18 @@ import com.jaeger.library.StatusBarUtil;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import lanou.com.fakebilibili.app.MyApp;
+import lanou.com.fakebilibili.area.view.AreaFirstAdapter;
 import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
+import lanou.com.fakebilibili.area.view.WmData;
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 import lanou.com.fakebilibili.utils.BaseActivity;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
@@ -45,18 +52,25 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+<<<<<<< HEAD
+=======
 
     private final int REQUEST_CODE  = 5;
 
 
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
     private TextView loginNavTv;
-
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
-
-
     private boolean isNight = false;
-
     private PopupWindow popupWindow;
+<<<<<<< HEAD
+    private WindowManager.LayoutParams lp;
+    private AreaFragment areaFragment;
+    private WindowManager windowManager;
+    private View floatView;
+
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
     @Override
     public int bindLayout() {
@@ -99,14 +113,21 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+<<<<<<< HEAD
+
+        lp = getWindow().getAttributes();
+=======
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
 
         list.add(new RecommendFragment());
         list.add(new ChaseFragment());
-        list.add(new AreaFragment());
+        areaFragment = new AreaFragment();
+        list.add(areaFragment);
 
+        viewPager.setOffscreenPageLimit(0);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         adapter.setList(list);
@@ -211,6 +232,21 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+<<<<<<< HEAD
+
+    //windowmanager退出
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+       AreaFirstAdapter.getWindowManager().removeView(AreaFirstAdapter.getFloatView());
+
+        return super.onKeyDown(keyCode, event);
+    }
+
+
+
+
+
+=======
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -230,4 +266,5 @@ public class MainActivity extends BaseActivity {
             }
         }
     }
+>>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 }
