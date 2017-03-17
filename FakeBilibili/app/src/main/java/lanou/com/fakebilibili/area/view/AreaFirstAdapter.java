@@ -53,6 +53,13 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
     private int nLine=1;
     private int fRv=2;
     private IRvClick iRvClick;
+    private IBtnClick iBtnClick;
+
+    public void setiBtnClick(IBtnClick iBtnClick) {
+        this.iBtnClick = iBtnClick;
+        notifyDataSetChanged();
+    }
+
     private WmData wmData;
     private static WindowManager windowManager;
     private static View floatView;
@@ -189,6 +196,12 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 });
             }
 
+            holder.getView(R.id.btn__frv).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    iBtnClick.clickclick();
+                }
+            });
 
             recyclerView.setLayoutManager(layoutManager);
             recyclerView.setAdapter(firstFrvAdpter);
@@ -240,7 +253,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         floatView = LayoutInflater.from(context).inflate(R.layout.floatscreen, null,false);
 
         IjkVideoView videoView = (IjkVideoView) floatView.findViewById(R.id.ijk_synthesize_content);
-        Button button= (Button) floatView.findViewById(R.id.asdasda);
+        TextView button= (TextView) floatView.findViewById(R.id.asdasda);
 
 
         videoView.setVideoURI(Uri.parse(path));
@@ -251,11 +264,12 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
 
         params.type=WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         params.format= PixelFormat.RGB_565;
-        params.flags=WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
+
 
         params.width=800;
         params.height=300;
 
+        params.windowAnimations = 0;
         floatView.setOnTouchListener(new View.OnTouchListener() {
             int lastX,lastY;
             int paramX,paramY;
@@ -298,7 +312,6 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         });
 
 
-//        wmData.setwmData(windowManager,floatView);
     }
 
 

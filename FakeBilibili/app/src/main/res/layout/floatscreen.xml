@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
@@ -8,20 +8,20 @@
     <lanou.com.fakebilibili.ijk.IjkVideoView
         android:id="@+id/ijk_synthesize_content"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="8"
+        android:layout_height="match_parent"
         >
 
     </lanou.com.fakebilibili.ijk.IjkVideoView>
 
-    <Button
+    <TextView
         android:id="@+id/asdasda"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:text="点击进入"
+        android:maxLines="1"
         android:textColor="#f88"
         android:textSize="20sp"
-        android:background="@color/day_bg"
         />
-</LinearLayout>
+</RelativeLayout>

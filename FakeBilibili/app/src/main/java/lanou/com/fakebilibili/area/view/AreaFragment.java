@@ -71,6 +71,13 @@ public class AreaFragment extends BaseFragment implements IView {
 
 
 
+        areaFirstTvAdapter.setiBtnClick(new IBtnClick() {
+            @Override
+            public void clickclick() {
+                //跳指定页面
+                startActivity(new Intent(getContext(),LoadingAct.class));
+            }
+        });
     }
 
     @Override

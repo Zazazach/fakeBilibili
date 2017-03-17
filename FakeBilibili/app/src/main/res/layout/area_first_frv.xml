@@ -30,6 +30,7 @@
         android:layout_marginLeft="9dp"/>
 
     <Button
+        android:id="@+id/btn__frv"
         android:layout_width="68dp"
         android:layout_height="30dp"
         android:layout_alignParentRight="true"

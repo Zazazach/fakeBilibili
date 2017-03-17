@@ -1,11 +1,8 @@
 package lanou.com.fakebilibili.area.view;
 
-import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Button;
+import android.widget.EditText;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.utils.BaseActivity;
 
@@ -18,32 +15,24 @@ import lanou.com.fakebilibili.utils.BaseActivity;
  * .   ____/`---'\____
  * . .'  \\|     |//  `.
  * ./  \\|||  :  |||//  \
- * Created by Zach on 17/3/15.
+ * Created by Zach on 17/3/16.
  */
 
 public class LoadingAct extends BaseActivity {
+    private EditText inputPhoneEt;
 
+    private EditText inputCodeEt;
 
-    @BindView(R.id.profile_head)
-    ImageView profileHead;
-    @BindView(R.id.profile_name)
-    TextView profileName;
-    @BindView(R.id.iv_scan)
-    ImageView ivScan;
-    @BindView(R.id.tv_login)
-    TextView tvLogin;
-    @BindView(R.id.tv_login_captcha)
-    TextView tvLoginCaptcha;
-    @BindView(R.id.iv_weibo_login)
-    ImageView ivWeiboLogin;
-    @BindView(R.id.iv_wechat_login)
-    ImageView ivWechatLogin;
-    @BindView(R.id.iv_qq_login)
-    ImageView ivQqLogin;
+    private Button requestCodeBtn;
+
+    private Button commitBtn;
+    //
+    int i = 30;
+    private String phString;
 
     @Override
     public int bindLayout() {
-        return R.layout.login_layou;
+        return R.layout.loading_layout;
     }
 
     @Override
@@ -60,6 +49,4 @@ public class LoadingAct extends BaseActivity {
     protected void bindEvent() {
 
     }
-
-
 }

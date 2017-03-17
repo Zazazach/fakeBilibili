@@ -8,6 +8,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -53,17 +54,43 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+<<<<<<< HEAD
     private final int REQUEST_CODE  = 5;
+=======
+<<<<<<< HEAD
+
+    private final int REQUEST_CODE  = 5;
+
+=======
+
+
+    private final int REQUEST_CODE  = 5;
+
+
+
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
     private View floatView;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
 
+
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     @Override
     public int bindLayout() {
         if (MyApp.appConfig.isNighTheme()) {
@@ -103,8 +130,15 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
+<<<<<<< HEAD
 
         lp = getWindow().getAttributes();
+=======
+
+
+        lp = getWindow().getAttributes();
+
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
@@ -218,13 +252,33 @@ public class MainActivity extends BaseActivity {
         });
     }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
     //windowmanager退出
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-       AreaFirstAdapter.getWindowManager().removeView(AreaFirstAdapter.getFloatView());
+        if (AreaFirstAdapter.getWindowManager()!=null){
+
+            Log.d("MainActivity", "AreaFirstAdapter.getWindowManager():" + AreaFirstAdapter.getWindowManager());
+
+            AreaFirstAdapter.getWindowManager().removeView(AreaFirstAdapter.getFloatView());
+
+        }
 
         return super.onKeyDown(keyCode, event);
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -244,4 +298,8 @@ public class MainActivity extends BaseActivity {
             }
         }
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 43e006463cd80f08d3499f4b7da82221669a81a6
 }

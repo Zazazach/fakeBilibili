@@ -83,8 +83,18 @@
                         android:src="@mipmap/dianshi"
                         android:layout_toLeftOf="@id/tv44"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="1.5dp"/>
+                        android:layout_marginRight="1.5dp"
+                        android:background="#FB7299"/>
 
+
+                    <ImageView
+                        android:id="@+id/scan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/scan"
+                        android:background="#FB7299"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"/>
                 </RelativeLayout>
 
 
