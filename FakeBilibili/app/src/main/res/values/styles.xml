@@ -30,6 +30,10 @@
     </style>
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 
@@ -49,5 +53,9 @@
     <style name="area_daytime" parent="AppTheme">
         <item name="android:background">@color/day_bg</item>
     </style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
 
 </resources>

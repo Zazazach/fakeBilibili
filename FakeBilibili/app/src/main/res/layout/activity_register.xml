@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="lanou.com.fakebilibili.activity.RegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_title_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/titleBgColor">
+
+        <ImageView
+            android:id="@+id/iv_back_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back_register"
+            android:text="注册账号"
+            android:textColor="@color/day_bg" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_countries_and_phone_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title_register"
+        android:layout_margin="16dp"
+        android:text="请确认你的国家或地区并输入手机号"
+        android:textColor="@color/day_text" />
+
+    <RelativeLayout
+        android:id="@+id/rl_countries_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_countries_and_phone_register"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_country_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="6dp"
+            android:text="国家或地区"
+            android:textColor="@color/day_title_bg"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_right_countries" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_country_register"
+            android:layout_marginTop="10dp"
+            android:background="@color/night_text" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_countries_register"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_choose_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="+00" />
+
+        <EditText
+            android:id="@+id/et_phone_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginLeft="20dp"
+            android:inputType="phone"
+            android:singleLine="true"
+            android:maxLength="15"
+            android:layout_toRightOf="@id/tv_choose_country" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_get_code_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="获取验证码"
+        android:layout_below="@id/rl_phone_register"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

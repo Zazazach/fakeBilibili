@@ -3,6 +3,7 @@
     package="lanou.com.fakebilibili">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -10,12 +11,36 @@
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
 
+=======
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 短信验证码权限集成mob -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.VIBRATE" />
+=======
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
 
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".app.MyApp"
@@ -38,6 +63,7 @@
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+<<<<<<< HEAD
 
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -53,6 +79,23 @@
         <activity android:name=".area.view.ScanAct"></activity>
 
 
+=======
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!-- 短信验证码集成mob -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".area.view.LoadingAct" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.CodeActivity"></activity>
+>>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     </application>
 
 </manifest>
