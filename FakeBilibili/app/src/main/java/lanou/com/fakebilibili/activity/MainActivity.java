@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import android.widget.TextView;
@@ -52,25 +53,23 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-<<<<<<< HEAD
-=======
+
 
     private final int REQUEST_CODE  = 5;
 
 
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
-<<<<<<< HEAD
+
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
     private View floatView;
 
-=======
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
 
     @Override
     public int bindLayout() {
@@ -113,11 +112,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-<<<<<<< HEAD
+
 
         lp = getWindow().getAttributes();
-=======
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
@@ -232,7 +230,7 @@ public class MainActivity extends BaseActivity {
         });
     }
 
-<<<<<<< HEAD
+
 
     //windowmanager退出
     @Override
@@ -246,7 +244,7 @@ public class MainActivity extends BaseActivity {
 
 
 
-=======
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -266,5 +264,5 @@ public class MainActivity extends BaseActivity {
             }
         }
     }
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
 }

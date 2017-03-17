@@ -148,14 +148,7 @@ public class LoginActivity extends BaseActivity {
 //                    }
 //                });
 //                registerPage.show(LoginActivity.this);
-                try {
-                    Field shellClass = FakeActivity.class.getDeclaredField("shellClass");
-                    Log.d("LoginActivity", shellClass.getType().getTypeParameters()[0].getName());
-//                    Log.d("LoginActivity", FakeActivity.class.getDeclaredField("shellClass"));
-                } catch (NoSuchFieldException e) {
-                    Log.d("LoginActivity", "null");
-                    e.printStackTrace();
-                }
+
             }
         });
 

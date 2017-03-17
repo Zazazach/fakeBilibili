@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="lanou.com.fakebilibili.activity.CodeActivity">
+    <RelativeLayout
+        android:id="@+id/rl_title_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/day_title_bg">
+
+        <ImageView
+            android:id="@+id/iv_back_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_back_code"
+            android:text="验证手机号"
+            android:textColor="@color/day_bg" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_prompt_code"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/rl_title_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="验证码已发送到以下手机,请在5分钟内完成注册"
+        android:textColor="@color/day_text"/>
+    <TextView
+        android:id="@+id/tv_phone_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_prompt_code"
+        android:layout_centerVertical="true"
+        android:textColor="@color/day_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="电话"/>
+    <EditText
+        android:id="@+id/et_code_code"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_phone_code"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:padding="15dp"
+        android:hint="输入验证码"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/day_bg"
+        android:inputType="number"
+        android:maxLength="6"
+        android:singleLine="true"/>
+    <TextView
+        android:id="@+id/tv_again_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重发验证码"
+        android:layout_below="@id/et_code_code"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/day_title_bg"/>
+    <Button
+        android:id="@+id/btn_go_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="下一步"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_again_code"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/day_bg"
+        android:background="@color/loginBg"/>
+
+</RelativeLayout>

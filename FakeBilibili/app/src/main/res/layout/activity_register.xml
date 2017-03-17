@@ -96,6 +96,7 @@
             android:layout_marginLeft="20dp"
             android:inputType="phone"
             android:singleLine="true"
+            android:maxLength="15"
             android:layout_toRightOf="@id/tv_choose_country" />
     </RelativeLayout>
     <Button
