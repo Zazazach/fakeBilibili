@@ -78,7 +78,7 @@ public class SynthesizeRecyclerAdapter extends RecyclerView.Adapter<BaseViewHold
         holder.getmView().findViewById(R.id.iv_synthesize_menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                click.popJump(position);
+                click.popJump(position, v);
             }
         });
     }
