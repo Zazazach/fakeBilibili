@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
 <merger version="3"><dataSet config="main"><source path="/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/src/main/shaders"/></dataSet><dataSet config="release"><source path="/Users/dllo/Desktop/fromGitHup/fakeBilibili/FakeBilibili/vitamio/src/release/shaders"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/src/main/shaders"/></dataSet><dataSet config="release"><source path="/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/src/release/shaders"/></dataSet></merger>
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0

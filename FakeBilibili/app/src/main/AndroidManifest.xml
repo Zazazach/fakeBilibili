@@ -2,24 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
-<<<<<<< HEAD
-
-=======
     <uses-permission android:name="android.permission.INTERNET" />
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<<<<<<< HEAD
+
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
 
-=======
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.VIBRATE" />
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
 
     <application
@@ -39,31 +34,25 @@
         <activity android:name=".recommend.LikeActivity" />
         <activity android:name=".recommend.SynthesizeContentActivity" />
         <activity android:name=".area.view.AreaFirstNlineAct" />
+        <activity android:name=".area.view.LoadingAct"></activity>
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-<<<<<<< HEAD
+
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
-=======
-            android:launchMode="singleTop"/>
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
 
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-<<<<<<< HEAD
+
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
 
+        <activity android:name=".area.view.ScanAct"></activity>
 
-        <activity android:name=".area.view.LoadingAct"></activity>
 
-
-=======
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:launchMode="singleTop"/>
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
     </application>
 
 </manifest>

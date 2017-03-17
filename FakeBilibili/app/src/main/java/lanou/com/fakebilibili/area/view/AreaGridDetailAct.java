@@ -1,8 +1,6 @@
 package lanou.com.fakebilibili.area.view;
 
 
-import android.animation.ValueAnimator;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -16,19 +14,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.uuzuche.lib_zxing.activity.CodeUtils;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -85,17 +80,49 @@ public class AreaGridDetailAct extends AppCompatActivity {
         Log.d("AreaGridDetailAct", "sharedPreferences.getInt " + sharedPreferences.getInt("theme", 0));
         setContentView(R.layout.area_grid_detail_act);
 
-
-
+        //设置维他命Player
         vitaminoPlayer();
 
+        //抽屉设置
         drawerSetting();
 
 
         fragmentArea();
 
 
+
+
+        ImageView scan= (ImageView) findViewById(R.id.scan);
+        scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AreaGridDetailAct.this, ScanAct.class);
+                startActivity(intent);
+            }
+        });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 5) {
+            if (null != data) {
+                Bundle bundle = data.getExtras();
+                if (bundle == null) {
+                    return;
+                }
+                if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
+                    String result = bundle.getString(CodeUtils.RESULT_STRING);
+                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+                } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
+                    Toast.makeText(AreaGridDetailAct.this, "解析二维码失败", Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+
+    }
+
 
     private void fragmentArea() {
         //视频下方的区域
