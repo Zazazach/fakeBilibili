@@ -29,10 +29,8 @@
         <item name="contentBg">@color/content_night_bg</item>
     </style>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
+
     <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
 
@@ -44,7 +42,6 @@
         <item name="android:windowExitAnimation">@anim/pop_out</item>
     </style>
 
-<<<<<<< HEAD
     <style name="area_nighttime" parent="AppTheme">
         <item name="android:background">@color/line</item>
     </style>
@@ -52,7 +49,5 @@
     <style name="area_daytime" parent="AppTheme">
         <item name="android:background">@color/day_bg</item>
     </style>
-=======
->>>>>>> 2a35de062bbc82bcf62e694fc136545152cc37f0
 
 </resources>
