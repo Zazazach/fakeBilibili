@@ -51,7 +51,7 @@ public class ScanAct extends BaseActivity {
                 bundle.putInt(CodeUtils.RESULT_TYPE, CodeUtils.RESULT_SUCCESS);
                 bundle.putString(CodeUtils.RESULT_STRING, result);
                 resultIntent.putExtras(bundle);
-                //这是结果吗?
+
                 Toast.makeText(ScanAct.this, result, Toast.LENGTH_SHORT).show();
                 ScanAct.this.setResult(RESULT_OK, resultIntent);
                 ScanAct.this.finish();

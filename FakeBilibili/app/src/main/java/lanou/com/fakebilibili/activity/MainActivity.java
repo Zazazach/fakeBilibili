@@ -54,18 +54,8 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-<<<<<<< HEAD
-
     private final int REQUEST_CODE  = 5;
 
-=======
-
-
-    private final int REQUEST_CODE  = 5;
-
-
-
->>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
@@ -76,11 +66,6 @@ public class MainActivity extends BaseActivity {
     private WindowManager windowManager;
     private View floatView;
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 091d3aafdbe0697682cf0da01516028b24b623d1
     @Override
     public int bindLayout() {
         if (MyApp.appConfig.isNighTheme()) {
