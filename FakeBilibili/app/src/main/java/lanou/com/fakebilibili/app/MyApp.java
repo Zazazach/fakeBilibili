@@ -25,6 +25,7 @@ import android.content.Context;
 
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
+import cn.jpush.android.api.JPushInterface;
 import lanou.com.fakebilibili.activity.navtheme.AppConfig;
 
 /**
@@ -40,6 +41,10 @@ public class MyApp extends Application{
         context = getApplicationContext();
         appConfig = new AppConfig();
         ZXingLibrary.initDisplayOpinion(this);
+
+        JPushInterface.init(this);
+        //可打印错误信息
+        JPushInterface.setDebugMode(true);
     }
 
     public static Context getContext() {

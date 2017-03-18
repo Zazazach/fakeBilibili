@@ -1,5 +1,9 @@
 [
     {
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
+    },
+    {
         "merged": "/Users/dllo/Desktop/GitDemo/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/layout/mediacontroller.xml",
         "source": "/Users/dllo/Desktop/GitDemo/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/layout/mediacontroller.xml"
     }
