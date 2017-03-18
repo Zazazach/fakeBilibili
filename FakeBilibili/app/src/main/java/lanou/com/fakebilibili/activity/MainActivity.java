@@ -55,8 +55,12 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private final int REQUEST_CODE  = 5;
 
+=======
+    private final int REQUEST_CODE = 5;
+>>>>>>> 2053d12b9603ec724130d175ae486becd5ed3eeb
 =======
 
 
@@ -72,6 +76,8 @@ public class MainActivity extends BaseActivity {
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -101,8 +107,8 @@ public class MainActivity extends BaseActivity {
 
     public void initView() {
 
-        tabLayout=bindView(R.id.tl_act_main);
-        viewPager=bindView(R.id.vp_act_main);
+        tabLayout = bindView(R.id.tl_act_main);
+        viewPager = bindView(R.id.vp_act_main);
 
         tabLayout = bindView(R.id.tl_act_main);
         viewPager = bindView(R.id.vp_act_main);
@@ -117,9 +123,9 @@ public class MainActivity extends BaseActivity {
         searchIv = bindView(R.id.iv_search_home_page);
 
         //沉浸式状态栏
-        StatusBarUtil.setColor(this,getResources().getColor(R.color.day_title_bg));
+        StatusBarUtil.setColor(this, getResources().getColor(R.color.day_title_bg));
         //抽屉的沉浸式状态栏
-        StatusBarUtil.setColorForDrawerLayout(this,drawerLayout,getResources().getColor(R.color.day_title_bg));
+        StatusBarUtil.setColorForDrawerLayout(this, drawerLayout, getResources().getColor(R.color.day_title_bg));
 
     }
 
@@ -129,6 +135,12 @@ public class MainActivity extends BaseActivity {
 <<<<<<< HEAD
 =======
         lp = getWindow().getAttributes();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 2053d12b9603ec724130d175ae486becd5ed3eeb
 >>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
 
@@ -201,7 +213,7 @@ public class MainActivity extends BaseActivity {
         loginNavTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,LoginActivity.class));
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
             }
         });
         changeThemeNavIv.setOnClickListener(new View.OnClickListener() {
@@ -252,7 +264,7 @@ public class MainActivity extends BaseActivity {
     //windowmanager退出
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (AreaFirstAdapter.getWindowManager()!=null){
+        if (AreaFirstAdapter.getWindowManager() != null) {
 
             Log.d("MainActivity", "AreaFirstAdapter.getWindowManager():" + AreaFirstAdapter.getWindowManager());
 
@@ -262,6 +274,10 @@ public class MainActivity extends BaseActivity {
 
         return super.onKeyDown(keyCode, event);
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
