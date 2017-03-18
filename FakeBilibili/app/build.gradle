@@ -6,6 +6,11 @@ apply plugin: 'android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+
+    sourceSets.main{
+        jniLibs.srcDirs=['libs']
+    }
     defaultConfig {
         applicationId "lanou.com.fakebilibili"
         minSdkVersion 21
@@ -82,5 +87,10 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile files('libs/core-3.3.0.jar')
     compile 'cn.yipianfengye.android:zxing-library:2.1'
+<<<<<<< HEAD
     compile project(':easeUI_CN')
+=======
+    compile files('libs/jpush-android_v3.0.3.jar')
+    compile files('libs/jcore-android_v1.1.1.jar')
+>>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
 }

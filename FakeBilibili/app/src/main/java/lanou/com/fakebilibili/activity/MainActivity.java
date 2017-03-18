@@ -55,7 +55,12 @@ public class MainActivity extends BaseActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private final int REQUEST_CODE = 5;
+=======
+    private final int REQUEST_CODE  = 5;
+
+>>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
 =======
 
 
@@ -74,6 +79,8 @@ public class MainActivity extends BaseActivity {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 
 >>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private WindowManager.LayoutParams lp;
@@ -81,7 +88,10 @@ public class MainActivity extends BaseActivity {
     private WindowManager windowManager;
     private View floatView;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     @Override
     public int bindLayout() {
         if (MyApp.appConfig.isNighTheme()) {
@@ -122,14 +132,22 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initData() {
 
+<<<<<<< HEAD
+=======
         lp = getWindow().getAttributes();
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
 >>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
 
