@@ -54,11 +54,28 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+<<<<<<< HEAD
     private final int REQUEST_CODE = 5;
+=======
+
+
+
+
+
+    private final int REQUEST_CODE  = 5;
+
+
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
@@ -106,9 +123,11 @@ public class MainActivity extends BaseActivity {
     public void initData() {
 
         lp = getWindow().getAttributes();
+<<<<<<< HEAD
 
+=======
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
-        lp = getWindow().getAttributes();
 
 
         adapter = new FragmentAdapter(getSupportFragmentManager());
@@ -237,7 +256,10 @@ public class MainActivity extends BaseActivity {
 
         return super.onKeyDown(keyCode, event);
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

@@ -2,7 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="lanou.com.fakebilibili">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.INTERNET" />
+=======
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"></uses-permission>
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -18,11 +27,19 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.VIBRATE" />
+=======
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
     <!-- 即时通讯Required -->
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -64,6 +81,10 @@
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
+<<<<<<< HEAD
+=======
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
@@ -73,6 +94,7 @@
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+<<<<<<< HEAD
 
             android:windowSoftInputMode="stateAlwaysHidden"/>
 
@@ -80,14 +102,19 @@
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
+=======
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity android:name=".area.view.ScanAct"></activity>
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
         <!-- 短信验证码集成mob -->
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <activity android:name=".area.view.LoadingAct" />
         <activity android:name=".activity.RegisterActivity" />
+<<<<<<< HEAD
         <activity android:name=".activity.CodeActivity"/>
 
         <!-- 设置环信应用的AppKey -->
@@ -112,6 +139,9 @@
         </receiver>
         <activity android:name=".recommend.TalkActivity"/>
 
+=======
+        <activity android:name=".activity.CodeActivity"></activity>
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
     </application>
 

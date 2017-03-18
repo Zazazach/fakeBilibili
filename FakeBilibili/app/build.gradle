@@ -80,6 +80,10 @@ dependencies {
     compile files('libs/MobTools-2016.1201.1839.jar')
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
+<<<<<<< HEAD
+=======
+
+>>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     compile files('libs/core-3.3.0.jar')
     compile 'cn.yipianfengye.android:zxing-library:2.1'
     compile project(':easeUI_CN')
