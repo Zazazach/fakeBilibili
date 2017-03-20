@@ -13,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.adapter.RecommendPagerAdapter;
 import lanou.com.fakebilibili.utils.BaseFragment;
 
 /**
@@ -43,7 +42,7 @@ public class RecommendFragment extends BaseFragment {
     protected void initData() {
         fragments = new ArrayList<>();
         fragments.add(new SynthesizeFragment());
-        fragments.add(new DynamicFragment());
+        fragments.add(new TalkFragment());
         adapter = new RecommendPagerAdapter(getChildFragmentManager());
         adapter.setFragments(fragments);
         viewPager.setAdapter(adapter);
