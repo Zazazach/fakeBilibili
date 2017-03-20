@@ -32,7 +32,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
 
 
-<<<<<<< HEAD
+
     <!-- 即时通讯Required -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -49,7 +49,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
-=======
     <!--推送 -->
 
     <!-- Required -->
@@ -65,7 +64,7 @@
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
->>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
+
 
     <application
         android:name=".app.MyApp"
@@ -105,7 +104,6 @@
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name=".area.view.ScanAct"></activity>
 
         <!-- 短信验证码集成mob -->
         <activity

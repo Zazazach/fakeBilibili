@@ -16,20 +16,20 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ee_9.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_video_play_btn_small_nor.png",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_video_play_btn_small_nor.png"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_settings_normal.png",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_settings_normal.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_new_friends_icon.png",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_new_friends_icon.png"
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_video_play_btn_small_nor.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_video_play_btn_small_nor.png"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_record_animate_05.png",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_05.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_new_friends_icon.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_new_friends_icon.png"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_record_animate_04.png",
@@ -196,12 +196,12 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_record_animate_14.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_chat_video_mask_to.9.png",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_chat_video_mask_to.9.png"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ee_19.png",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ee_19.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_chat_video_mask_to.9.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_chat_video_mask_to.9.png"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_chatto_voice_playing.png",

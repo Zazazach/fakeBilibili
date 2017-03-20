@@ -56,12 +56,12 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_voice_call.xml"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_activity_baidumap.xml",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_activity_baidumap.xml"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_fragment_chat.xml",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_fragment_chat.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_activity_baidumap.xml",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_activity_baidumap.xml"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_chat_menu_item.xml",
@@ -80,12 +80,12 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_widget_switch_button.xml"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_sent_picture.xml",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_showvideo_activity.xml",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_showvideo_activity.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_sent_picture.xml",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_sent_video_call.xml",

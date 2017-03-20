@@ -17,34 +17,22 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
-
 import android.widget.TextView;
-
 import android.widget.PopupWindow;
-
 import android.widget.Toast;
-
 import com.jaeger.library.StatusBarUtil;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
 import com.uuzuche.lib_zxing.activity.CodeUtils;
-
-import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import lanou.com.fakebilibili.app.MyApp;
 import lanou.com.fakebilibili.area.view.AreaFirstAdapter;
 import lanou.com.fakebilibili.area.view.AreaFragment;
 import lanou.com.fakebilibili.R;
-import lanou.com.fakebilibili.area.view.WmData;
 import lanou.com.fakebilibili.recommend.RecommendFragment;
 import lanou.com.fakebilibili.utils.BaseActivity;
 import lanou.com.fakebilibili.adapter.FragmentAdapter;
 import lanou.com.fakebilibili.chase.chasefragment.view.ChaseFragment;
-
 
 public class MainActivity extends BaseActivity {
 
@@ -54,44 +42,17 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    private final int REQUEST_CODE = 5;
-=======
     private final int REQUEST_CODE  = 5;
-
->>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
-=======
-
-
-
-
-
-    private final int REQUEST_CODE  = 5;
-
-
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
     private View floatView;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     @Override
     public int bindLayout() {
         if (MyApp.appConfig.isNighTheme()) {
@@ -132,22 +93,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initData() {
 
-<<<<<<< HEAD
-=======
         lp = getWindow().getAttributes();
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 7e2a5b62a09e88818001f3d28139a65004a91290
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
 
@@ -274,10 +221,7 @@ public class MainActivity extends BaseActivity {
 
         return super.onKeyDown(keyCode, event);
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
