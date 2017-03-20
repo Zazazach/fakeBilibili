@@ -54,38 +54,20 @@ public class MainActivity extends BaseActivity {
     private ViewPager viewPager;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
-<<<<<<< HEAD
     private final int REQUEST_CODE  = 5;
 
-=======
-
-
-
-
-
-    private final int REQUEST_CODE  = 5;
-
-
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private TextView loginNavTv;
     private ImageView loginNavIv, changeThemeNavIv, searchIv;
     private boolean isNight = false;
     private PopupWindow popupWindow;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
     private WindowManager.LayoutParams lp;
     private AreaFragment areaFragment;
     private WindowManager windowManager;
     private View floatView;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
+
     @Override
     public int bindLayout() {
         if (MyApp.appConfig.isNighTheme()) {
@@ -126,16 +108,9 @@ public class MainActivity extends BaseActivity {
     @Override
     public void initData() {
 
-<<<<<<< HEAD
-=======
+
         lp = getWindow().getAttributes();
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f33c8d13274cc3442f77f8b1bf3ff23679c91cff
         adapter = new FragmentAdapter(getSupportFragmentManager());
         list = new ArrayList<>();
 
