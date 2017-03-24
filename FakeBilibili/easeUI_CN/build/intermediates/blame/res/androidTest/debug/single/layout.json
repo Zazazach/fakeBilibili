@@ -8,6 +8,7 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_conversation_item.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_activity_show_big_image.xml",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_activity_show_big_image.xml"
     },
@@ -18,6 +19,18 @@
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_row_chat_history.xml",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_row_chat_history.xml"
+=======
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_layout_chat_primary_menu.xml",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_layout_chat_primary_menu.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_widget_chat_input_menu.xml",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_widget_chat_input_menu.xml"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_row_big_expression.xml",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/layout/ease_row_big_expression.xml"
+>>>>>>> 78d2ced43082017aa2cfdf45fdfb017acd4741d6
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/layout/ease_expression_gridview.xml",

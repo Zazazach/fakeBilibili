@@ -49,7 +49,9 @@ public class MyApp extends Application {
          * 即时通讯的初始化
          */
 
-        EaseUI.getInstance().init(this, null);
+        EMOptions options = new EMOptions();
+        options.setAcceptInvitationAlways(true);
+        EaseUI.getInstance().init(this, options);
         EMClient.getInstance().setDebugMode(true);
 
         JPushInterface.init(this);

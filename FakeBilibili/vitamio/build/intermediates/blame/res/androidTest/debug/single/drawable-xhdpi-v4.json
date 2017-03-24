@@ -20,6 +20,7 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_focused_holo.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
     },
@@ -30,6 +31,18 @@
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_control_pressed_holo.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_control_pressed_holo.png"
+=======
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_secondary_holo.9.png"
+>>>>>>> 78d2ced43082017aa2cfdf45fdfb017acd4741d6
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_play.png",

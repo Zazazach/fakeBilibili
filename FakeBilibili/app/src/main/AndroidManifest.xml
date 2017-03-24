@@ -30,9 +30,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -48,14 +46,11 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-permission android:name="android.permission.VIBRATE" />
-
-
 
     <!-- 即时通讯Required -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -100,7 +95,6 @@
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -111,17 +105,13 @@
         <activity
             android:name=".area.view.AreaGridDetailAct"
             android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation"
-
-
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:windowSoftInputMode="stateAlwaysHidden" />
 
-
         <activity
             android:name=".activity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-
             android:windowSoftInputMode="stateAlwaysHidden"/>
 
         <activity android:name=".area.view.ScanAct"
@@ -159,9 +149,6 @@
             </intent-filter>
         </receiver>
         <activity android:name=".recommend.TalkActivity"/>
-
-
-
 
 
         <!--————————————————————————————————————下方全是 推送默认设置 莫管!!!-->
@@ -245,8 +232,6 @@
         <!-- Required SDK核心功能-->
         <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
 
-
-
         <!-- Required. For publish channel feature -->
         <!-- JPUSH_CHANNEL 是为了方便开发者统计APK分发渠道。-->
         <!-- 例如: -->
@@ -256,6 +241,7 @@
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
         <!-- Required. AppKey copied from Portal -->
         <meta-data android:name="JPUSH_APPKEY" android:value="2c19ca0fd77163f4d7826b40"/>
+        <activity android:name=".recommend.ChatActivity"/>
 
 
 

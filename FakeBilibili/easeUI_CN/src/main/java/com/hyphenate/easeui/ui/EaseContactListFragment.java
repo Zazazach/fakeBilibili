@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -29,7 +30,9 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
 import com.hyphenate.EMConnectionListener;
@@ -69,19 +72,24 @@ public class EaseContactListFragment extends EaseBaseFragment {
     
     private Map<String, EaseUser> contactsMap;
 
+
     
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.ease_fragment_contact_list, container, false);
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-    	//to avoid crash when open app after long time stay in background after user logged into another device
-        if(savedInstanceState != null && savedInstanceState.getBoolean("isConflict", false))
-            return;
-        super.onActivityCreated(savedInstanceState);
-    }
+//    @Override
+//    public void onActivityCreated(Bundle savedInstanceState) {
+//    	//to avoid crash when open app after long time stay in background after user logged into another device
+//        if(savedInstanceState != null && savedInstanceState.getBoolean("isConflict", false))
+//            return;
+//        super.onActivityCreated(savedInstanceState);
+//
+//
+//    }
+
+
 
     @Override
     protected void initView() {
@@ -93,10 +101,12 @@ public class EaseContactListFragment extends EaseBaseFragment {
         //search
         query = (EditText) getView().findViewById(R.id.query);
         clearSearch = (ImageButton) getView().findViewById(R.id.search_clear);
+
     }
 
     @Override
     protected void setUpView() {
+        Log.e(TAG, "setUpView: start");
         EMClient.getInstance().addConnectionListener(connectionListener);
         
         contactList = new ArrayList<EaseUser>();
@@ -227,6 +237,8 @@ public class EaseContactListFragment extends EaseBaseFragment {
      * get contact list and sort, will filter out users in blacklist
      */
     protected void getContactList() {
+
+        Log.e(TAG, "getContactList: before clear");
         contactList.clear();
         if(contactsMap == null){
             return;

@@ -204,6 +204,7 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_chatting_setmode_keyboard_btn_pressed.png"
     },
     {
+<<<<<<< HEAD
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ee_32.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ee_32.png"
     },
@@ -214,6 +215,18 @@
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_record_animate_03.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_record_animate_03.png"
+=======
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_voice_unread.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_voice_unread.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ee_14.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ee_14.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_chat_video_mask_to.9.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_chat_video_mask_to.9.png"
+>>>>>>> 78d2ced43082017aa2cfdf45fdfb017acd4741d6
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_mm_listitem_pressed.9.png",

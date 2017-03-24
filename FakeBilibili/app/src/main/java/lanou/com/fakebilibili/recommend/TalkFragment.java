@@ -5,8 +5,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hyphenate.EMCallBack;
+import com.hyphenate.EMError;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
 
@@ -70,7 +72,7 @@ public class TalkFragment extends BaseFragment implements View.OnClickListener {
                     Log.d("TalkFragment", "注册成功");
                 } catch (HyphenateException e) {
                     e.printStackTrace();
-                    Log.d("TalkFragment", "注册失败");
+                    Log.e("TalkFragment", "注册失败"+e.getMessage());
                 }
             }
         }).start();
@@ -83,11 +85,13 @@ public class TalkFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public void onSuccess() {
                 startActivity(new Intent(getContext(),TalkActivity.class));
+                //Toast.makeText(getContext(), "登录成功", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onError(int i, String s) {
                 Log.d("TalkFragment", i + " " + s.toString());
+
             }
 
             @Override
