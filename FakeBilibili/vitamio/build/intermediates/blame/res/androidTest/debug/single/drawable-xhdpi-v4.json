@@ -20,12 +20,12 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_play.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/mediacontroller_pause.png",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/mediacontroller_pause.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/bundles/debug/res/drawable-xhdpi-v4/scrubber_track_holo_dark.9.png"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/vitamio/build/intermediates/res/merged/androidTest/debug/drawable-xhdpi-v4/scrubber_secondary_holo.9.png",

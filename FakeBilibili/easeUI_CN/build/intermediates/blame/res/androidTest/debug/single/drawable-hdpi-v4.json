@@ -204,12 +204,12 @@
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_chat_face_pressed.png"
     },
     {
-        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ee_14.png",
-        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ee_14.png"
-    },
-    {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_voice_unread.png",
         "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ease_voice_unread.png"
+    },
+    {
+        "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ee_14.png",
+        "source": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/drawable-hdpi-v4/ee_14.png"
     },
     {
         "merged": "/Users/dllo/Desktop/MyGit/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/androidTest/debug/drawable-hdpi-v4/ease_chat_video_mask_to.9.png",
