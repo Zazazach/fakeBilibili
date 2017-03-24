@@ -53,7 +53,7 @@ public class AreaFirstFrvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public void onBindViewHolder(BaseViewHolder holder, final int position) {
-        ImageView imageView=holder.getView(R.id.imageView);
+        ImageView imageView=holder.getView(R.id.imageView1);
         Glide.with(context).load(list.get(position).getCover()).into(imageView);
 
         TextView textView=holder.getView(R.id.tv_area_first_frv_line);

@@ -1,0 +1,1 @@
+export PATH=//Users/huobohe/AndroidStudio/Android-SDK-mac/platform-tools /:$PATH

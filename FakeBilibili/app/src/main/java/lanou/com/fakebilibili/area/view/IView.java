@@ -18,4 +18,5 @@ public interface IView {
     <T> void  successData(T wanted);
     void failData();
     void rvClick(int position);
+
 }

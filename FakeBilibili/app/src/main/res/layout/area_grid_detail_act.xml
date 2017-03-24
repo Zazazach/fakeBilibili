@@ -66,7 +66,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/tv44"
+                        android:id="@+id/tv444"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@mipmap/dianshi"
-                        android:layout_toLeftOf="@id/tv44"
+                        android:layout_toLeftOf="@id/tv444"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="1.5dp"
                         android:background="#FB7299"/>
@@ -115,7 +115,7 @@
             android:id="@+id/tl_grid_detail_act"
             android:layout_width="170dp"
             android:layout_height="35dp"
-            ></android.support.design.widget.TabLayout>
+            />
 
 
 
@@ -125,7 +125,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#eaeaea"
-            ></android.support.v4.view.ViewPager>
+            />
 
 
 

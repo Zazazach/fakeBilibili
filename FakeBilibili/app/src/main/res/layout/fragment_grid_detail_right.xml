@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/right"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="6dp"
     android:layout_marginRight="6dp"
-    android:layout_marginLeft="6dp">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_fragment_grid_detail_right"
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></android.support.v7.widget.RecyclerView>
-</LinearLayout>
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.MapView>
+
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="标准地图"
+        android:textSize="10sp"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn1"
+        android:text="卫星地图"
+        android:id="@+id/btn2"
+        android:textSize="10sp"/>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn2"
+        android:text="夜间地图"
+        android:id="@+id/btn3"
+        android:textSize="10sp"/>
+
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/btn3"
+        android:text="搜索地图"
+        android:textSize="10sp"
+        android:id="@+id/btn4"/>
+
+        <EditText
+            android:id="@+id/et_map"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn4"
+            android:hint="请输入关键字            "
+            android:maxLines="1"/>
+
+
+
+
+
+</RelativeLayout>

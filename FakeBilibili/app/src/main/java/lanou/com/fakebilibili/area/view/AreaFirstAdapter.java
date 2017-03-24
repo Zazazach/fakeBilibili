@@ -27,10 +27,12 @@ import com.youth.banner.loader.ImageLoader;
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.area.modle.AreaFirstBean;
 import lanou.com.fakebilibili.ijk.IjkVideoView;
+import lanou.com.fakebilibili.liteorm.MyLiteOrm;
 import lanou.com.fakebilibili.utils.BaseViewHolder;
 
 /**
@@ -310,6 +312,7 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 windowManager.removeViewImmediate(floatView);
             }
         });
+
 
 
     }

@@ -6,10 +6,10 @@ apply plugin: 'android-apt'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
-
-
-    sourceSets.main{
-        jniLibs.srcDirs=['libs']
+    sourceSets{
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
     }
     defaultConfig {
         applicationId "lanou.com.fakebilibili"
@@ -25,11 +25,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            jniLibs.srcDirs = ['libs']  /**在libs文件夹下找so文件*/
-        }
-    }
+
 }
 repositories {
     mavenCentral()
@@ -87,10 +83,9 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile files('libs/core-3.3.0.jar')
     compile 'cn.yipianfengye.android:zxing-library:2.1'
-
     compile project(':easeUI_CN')
-
     compile files('libs/jpush-android_v3.0.3.jar')
     compile files('libs/jcore-android_v1.1.1.jar')
-
+    compile files('libs/AMap3DMap_5.0.0_AMapSearch_5.0.0_AMapLocation_3.3.0_20170311.jar')
+    compile files('libs/lite-orm-1.9.2.jar')
 }

@@ -24,7 +24,7 @@
         android:layout_weight="4"
         android:src="@mipmap/mokey"
         android:scaleType="fitXY"
-        android:id="@+id/imageView" />
+        android:id="@+id/imageView1" />
 
     <TextView
         android:id="@+id/tv_area_first_frv_line"

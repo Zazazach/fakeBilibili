@@ -49,6 +49,7 @@ import lanou.com.fakebilibili.R;
 public class AreaGridDetailAct extends AppCompatActivity {
 
     String path = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+  //  String path = "http://vod.lexue.com/video/5e4f6939170318.mp4";
 
     private ViewPager viewPager;
     private TabLayout tabLayout;
@@ -79,6 +80,15 @@ public class AreaGridDetailAct extends AppCompatActivity {
 
         Log.d("AreaGridDetailAct", "sharedPreferences.getInt " + sharedPreferences.getInt("theme", 0));
         setContentView(R.layout.area_grid_detail_act);
+
+
+//        findViewById(R.id.tv444).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(AreaGridDetailAct.this,MapAct.class));
+//                finish();
+//            }
+//        });
 
         //设置维他命Player
         vitaminoPlayer();
