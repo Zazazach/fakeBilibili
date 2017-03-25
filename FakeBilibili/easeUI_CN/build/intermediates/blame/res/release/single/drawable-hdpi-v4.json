@@ -32,12 +32,12 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ee_8.png"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_input_bar_bg_active.9.png",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_input_bar_bg_active.9.png"
-    },
-    {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_video_recorder_start_btn.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_video_recorder_start_btn.png"
+    },
+    {
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_input_bar_bg_active.9.png",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_input_bar_bg_active.9.png"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_location_msg.9.png",
@@ -88,12 +88,12 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_chatto_voice_playing_f3.png"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_settings_selected.png",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_settings_selected.png"
-    },
-    {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ee_22.png",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ee_22.png"
+    },
+    {
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_settings_selected.png",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/drawable-hdpi/ease_settings_selected.png"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/drawable-hdpi-v4/ease_record_animate_01.png",

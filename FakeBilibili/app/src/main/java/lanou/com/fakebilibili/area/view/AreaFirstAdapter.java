@@ -126,6 +126,8 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
             adapter.setiRvClick(new IRvClick() {
                 @Override
                 public void clickMe(int position) {
+
+                    //设置浮动屏幕
                    setFloatScreen();
                 }
             });
@@ -268,8 +270,9 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
         params.format= PixelFormat.RGB_565;
 
 
-        params.width=800;
-        params.height=300;
+        params.width=500;
+        params.height=250;
+
 
         params.windowAnimations = 0;
         floatView.setOnTouchListener(new View.OnTouchListener() {
@@ -297,6 +300,8 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
 
                         windowManager.updateViewLayout(floatView,params);
                         break;
+
+
                 }
 
                 return true;
@@ -312,6 +317,15 @@ public class AreaFirstAdapter extends RecyclerView.Adapter<BaseViewHolder>{
                 windowManager.removeViewImmediate(floatView);
             }
         });
+
+//        button.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//
+//                windowManager.removeViewImmediate(floatView);
+//                return false;
+//            }
+//        });
 
 
 

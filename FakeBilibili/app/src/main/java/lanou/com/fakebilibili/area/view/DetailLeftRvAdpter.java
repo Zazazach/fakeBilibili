@@ -1,7 +1,9 @@
 package lanou.com.fakebilibili.area.view;
 
 import android.content.Context;
+import android.os.Looper;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,6 +16,7 @@ import java.util.ArrayList;
 
 import lanou.com.fakebilibili.R;
 import lanou.com.fakebilibili.area.modle.OrmBean;
+import lanou.com.fakebilibili.area.modle.RealBean;
 import lanou.com.fakebilibili.liteorm.MyLiteOrm;
 import lanou.com.fakebilibili.okhttp.ICallback;
 import lanou.com.fakebilibili.okhttp.OkhttpTool;
@@ -37,6 +40,7 @@ import static lanou.com.fakebilibili.finaldata.UrlData.RECOMMEND;
 public class DetailLeftRvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
     private Context context;
     private OrmBean ormBean;
+    private ArrayList<RealBean> arrayList;
 
     public DetailLeftRvAdpter(Context context) {
         this.context = context;
@@ -72,53 +76,55 @@ public class DetailLeftRvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
                 }
             });
         }
-//        if (getItemViewType(position) > 1) {
-//
-
-        ormBean = new OrmBean();
-
-        OkhttpTool.getInstance().parse(RECOMMEND, OrmBean.class, new ICallback<OrmBean>() {
-            @Override
-            public void onSuccess(OrmBean wanted) {
-                ormBean = wanted;
-            }
-
-            @Override
-            public void onFail(Throwable throwable) {
-
-            }
-        });
 
 
-        MyThreadPool.getInstance().getThreadPoolExecutor().execute(new Runnable() {
-            @Override
-            public void run() {
+        if (position==0) {
 
-                MyLiteOrm.getInstance().insertOrm(ormBean);
-
-            }
-        });
+            MyThreadPool.getInstance().getThreadPoolExecutor().execute(new Runnable() {
+                @Override
+                public void run() {
 
 
-        try {
-            Thread.sleep(500);
+                    ormBean = new OrmBean();
 
-            ArrayList<OrmBean> list = MyLiteOrm.getInstance().queryData(OrmBean.class);
+                    OkhttpTool.getInstance().parse(RECOMMEND, OrmBean.class, new ICallback<OrmBean>() {
+                        @Override
+                        public void onSuccess(OrmBean wanted) {
+                            ormBean = wanted;
 
-            Toast.makeText(context, "list.size()" + list.size(), Toast.LENGTH_SHORT).show();
+                            for (OrmBean.DataBean dataBean : ormBean.getData()) {
+                                RealBean realBean = new RealBean();
+                                realBean.setCover(dataBean.getCover());
+                                realBean.setTitle(dataBean.getTitle());
 
+                                MyLiteOrm.getInstance().insertOrm(realBean);
 
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+                            }
+
+                            Log.e("DetailLeftRvAdpter", "MyLiteOrm.getInstance().queryData(RealBean.class).size():" + MyLiteOrm.getInstance().queryData(RealBean.class).size());
+
+                        }
+
+                        @Override
+                        public void onFail(Throwable throwable) {
+                            Log.e("DetailLeftRvAdpter", throwable.toString());
+                        }
+                    });
+
+                }
+            });
         }
 
-//                    if (list != null) {
-//                        ImageView imageView = holder.getView(R.id.imageView1);
-//                        Glide.with(context).load(list.get(position).getData().get(0).getCover()).into(imageView);
-//
-//                        TextView textView = holder.getView(R.id.tv_area_first_frv_line);
-//                        textView.setText(list.get(0).getData().get(position).getTitle());
-//                    }
+
+        arrayList = MyLiteOrm.getInstance().queryData(RealBean.class);
+
+        if (getItemViewType(position)>=2&&arrayList!=null) {
+
+
+            holder.setImage(R.id.imageView1, arrayList.get(position - 2).getCover());
+            holder.setText(R.id.tv_area_first_frv_line, arrayList.get(position - 2).getTitle());
+
+        }
 
 
     }
@@ -126,7 +132,7 @@ public class DetailLeftRvAdpter extends RecyclerView.Adapter<BaseViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 20;
+        return arrayList!=null?arrayList.size()+2:1;
     }
 
     @Override

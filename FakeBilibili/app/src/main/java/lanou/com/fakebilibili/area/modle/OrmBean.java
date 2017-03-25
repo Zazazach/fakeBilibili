@@ -1,6 +1,7 @@
 package lanou.com.fakebilibili.area.modle;
 
 import com.google.gson.annotations.SerializedName;
+import com.litesuits.orm.db.annotation.Table;
 
 import java.util.List;
 

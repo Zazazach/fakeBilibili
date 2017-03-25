@@ -16,16 +16,16 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_conversation_item.xml"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_widget_contact_list.xml",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_widget_contact_list.xml"
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_voice.xml",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_voice.xml"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_location.xml",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_location.xml"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_voice.xml",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_voice.xml"
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_widget_contact_list.xml",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_widget_contact_list.xml"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_widget_chat_input_menu.xml",
@@ -56,12 +56,12 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_layout_emojicon_menu.xml"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_chat_message_list.xml",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_chat_message_list.xml"
-    },
-    {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_widget_voice_recorder.xml",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_widget_voice_recorder.xml"
+    },
+    {
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_chat_message_list.xml",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_chat_message_list.xml"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_voice_call.xml",
@@ -84,12 +84,12 @@
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_chat_menu_item.xml"
     },
     {
-        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_message.xml",
-        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_message.xml"
-    },
-    {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_sent_picture.xml",
         "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_sent_picture.xml"
+    },
+    {
+        "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_received_message.xml",
+        "source": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/src/main/res/layout/ease_row_received_message.xml"
     },
     {
         "merged": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/res/merged/release/layout/ease_row_big_expression.xml",
