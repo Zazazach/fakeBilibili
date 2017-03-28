@@ -82,10 +82,14 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'
     compile files('libs/core-3.3.0.jar')
+    //二维码
     compile 'cn.yipianfengye.android:zxing-library:2.1'
     compile project(':easeUI_CN')
     compile files('libs/jpush-android_v3.0.3.jar')
     compile files('libs/jcore-android_v1.1.1.jar')
     compile files('libs/AMap3DMap_5.0.0_AMapSearch_5.0.0_AMapLocation_3.3.0_20170311.jar')
     compile files('libs/lite-orm-1.9.2.jar')
+
+    //jcplayer
+    compile 'fm.jiecao:jiecaovideoplayer:5.5.2'
 }

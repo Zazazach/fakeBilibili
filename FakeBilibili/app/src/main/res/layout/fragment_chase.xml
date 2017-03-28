@@ -1,10 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/chase_recyclerView"
+    <com.amap.api.maps.MapView
+        android:id="@+id/map_local"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
-</LinearLayout>
+        android:layout_height="300dp"
+        />
+
+    <ListView
+        android:id="@+id/map_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/map_local"
+        android:divider="#f88"
+        android:dividerHeight="1dp"
+        android:scrollbars="none"/>
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回当前位置"/>
+    <Button
+        android:id="@+id/btn_to_jc_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="嫂子"
+        android:layout_below="@id/btn_back"/>
+    <Button
+        android:id="@+id/btn_to_map_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="地图应用"
+        android:layout_toRightOf="@id/btn_back"/>
+</RelativeLayout>

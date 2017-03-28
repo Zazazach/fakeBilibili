@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-large-v4/values-large-v4.xml",
+        "outputFile": "/Users/dllo/Desktop/GitHubDesktopDemo/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values-large-v4/values-large-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 103
                 },
                 "from": {
-                    "file": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/values-large-v4/values-large-v4.xml",
+                    "file": "/Users/dllo/Desktop/GitHubDesktopDemo/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/values-large-v4/values-large-v4.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 157
                 },
                 "from": {
-                    "file": "/Users/huobohe/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/values-large-v4/values-large-v4.xml",
+                    "file": "/Users/dllo/Desktop/GitHubDesktopDemo/fakeBilibili/FakeBilibili/easeUI_CN/build/intermediates/bundles/debug/res/values-large-v4/values-large-v4.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
